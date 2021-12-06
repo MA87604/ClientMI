@@ -1,0 +1,51 @@
+{
+  "name": "clientmi",
+  "version": "1.0.0",
+  "description": "Client MI project",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor JSFile/configuration.js",
+    "pretest": "tsc",
+    "protractor": "./node_modules/protractor/built/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/core": "^12.2.5",
+    "@cucumber/cucumber": "^7.2.1",
+    "@types/chai-as-promised": "^7.1.4",
+    "@types/cucumber": "^7.0.0",
+    "@types/jasmine": "^3.8.1",
+    "@types/jasminewd2": "^2.0.10",
+    "@types/node": "^16.3.1",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^7.0.0-rc.0",
+    "cucumber-html-report": "^0.6.5",
+    "cucumber-html-reporter": "^5.4.0",
+    "exceljs": "^4.3.0",
+    "fs": "0.0.1-security",
+    "jasmine": "^3.8.0",
+    "jquery": "^3.6.0",
+    "node-xlsx": "^0.17.1",
+    "package_name": "^1.0.2",
+    "pdf2json": "^1.2.3",
+    "pdfreader": "^1.2.10",
+    "protractor-cucumber-framework": "^8.2.1",
+    "query-selector-shadow-dom": "^1.0.0",
+    "resq": "^1.10.1",
+    "selenium-webdriver": "^4.0.0-beta.4",
+    "shadow-dom-inject-styles": "^1.0.3",
+    "webdriver": "^7.7.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/jquery": "^3.5.6",
+    "protractor": "^7.0.0",
+    "protractor-react-selector": "^2.2.4",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
+    "webdriver-manager": "^12.1.8"
+  }
+}

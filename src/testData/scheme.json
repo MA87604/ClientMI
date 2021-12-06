@@ -1,0 +1,312 @@
+{
+
+   "schemeName" :  [
+    "GF06865001 - YOUR M & S PENSION SAVING PLAN",
+    "GF15927001 - MITCHELLS & BUTLERS PENSION PLAN", 
+    "GF10606001 - THE TESCO RETIREMENT SAVINGS PLAN",
+    "GF24865001 - PACE DC - CO-OP SECTION",
+    "GF32307001 - RBS GROUP RETIREMENT SAVINGS PLAN (GIB)",
+    "GF43184001 - SERCO", 
+    "GF62596001 - RBS GROUP RETIREMENT SAVINGS PLAN", 
+    "GF65927001 - SIEMENS HEALTHINEERS PENSION PLAN",
+    "GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN",
+    "GF75755001 - SAINSBURY'S SIPP", 
+    "GF90275001 - SAVE THE CHILDREN UK GROUP PERSONAL PENSION", 
+    "GF26495001 - PACE DC - CO-OPERATIVE BANK SECTION AVCS",
+    "GF34865001 - PACE DC - CO-OP SECTION AVCS",
+    "GF48375001 - THE LEGAL & GENERAL MASTERTRUST (SOMERFIELD TRANSFER PLAN)", 
+    "GF63965001 - BARCLAYS PENSION SAVINGS PLAN",
+    "GF68407001 - LONDON STOCK EXCHANGE GROUP PENSION PLAN", 
+    "GF72027001 - KINGFISHER PENSION SCHEME", 
+    "GF83965001 - SAINSBURY'S PENSION SCHEME AVC", 
+    "GF90637001 - SERCO WORKSAVE PENSION PLAN", 
+    "GF06965001 - ARGOS PERSONAL PENSION PLAN",
+    "GF17495001 - PACE DC - CO-OPERATIVE BANK SECTION", 
+    "GF27865001 - THE M&S AVC SCHEME", 
+    "GF42075001 - IKEA RETIREMENT INCOME SCHEME",
+    "GF54037001 - FLEXIBLE RETIREMENT PLAN",
+    "GF65737001 - ACCENTURE RETIREMENT SAVINGS PLAN",
+    "GF71095001 - GREGGS PENSION SCHEME", 
+    "GF74927001 - MITCHELLS & BUTLERS EXECUTIVE PENSION PLAN",
+    "GF89265001 - ALLIANCE HEALTHCARE AND BOOTS RETIREMENT SAVINGS PLAN"
+],
+
+  "scheme" :{
+    
+    "GF06865001":
+    {"schemeCategory":
+      [
+      "Deferred Members Existing",
+      "Ex DB Members April 2017"]
+    },
+
+    "GF06965001 - ARGOS PERSONAL PENSION PLAN":
+    [ 
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "Bands B & A"},
+      {"schemeCategory": "Bands D & C"},
+      {"schemeCategory": "CALENDAR TO LUNAR MONTHLY TRANSFERS"},
+      {"schemeCategory": "Former DB Members"},
+      {"schemeCategory": "Home Retail Group AE Population"},
+      {"schemeCategory": "Lunar AE Population"},
+      {"schemeCategory": "Lunar Store Management & Band E"},
+      {"schemeCategory": "Lunar Stores/Dist Centres & Band F"},
+      {"schemeCategory": "Lunar to Calendar Monthly Transfers"},
+      {"schemeCategory": "Store Management & Band E"}, 
+      {"schemeCategory": "Stores, Distribution and Call Centres & Band F      "}
+    ],
+    "GF10606001 - THE TESCO RETIREMENT SAVINGS PLAN":
+    [
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "Booker"},
+      {"schemeCategory": "Booker - Best Foods Ltd"},
+      {"schemeCategory": "Jack's"},
+      {"schemeCategory": "TRSP Non Senior"},
+      {"schemeCategory": "TRSP Senior"}
+    ],
+    "GF15927001 - MITCHELLS & BUTLERS PENSION PLAN":[
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "DB AVC Deferred Member"},
+      {"schemeCategory": "DB AVC Member"},
+      {"schemeCategory": "DB/DC Deferred Members Main Plan"},
+      {"schemeCategory": "DB AVC Existing Members"},
+      {"schemeCategory": "DB AVC New Members"},
+      {"schemeCategory": "Main  Weekly Paid"},
+      {"schemeCategory": "Main  Weekly Paid DB/DC"},
+      {"schemeCategory": "Main Plan Deferred"},
+      {"schemeCategory": "Main Plan Salaried"},
+      {"schemeCategory": "Main Plan Salaried DB/DC"}
+
+    ] ,
+    "GF17495001 - PACE DC - CO-OPERATIVE BANK SECTION":
+    [
+      {"schemeCategory":"No Filter"},
+      {"schemeCategory": "DC Only (4 Weekly)"},
+      {"schemeCategory": "DC Only (Monthly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (4 Weekly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (Monthly)"}
+    ],
+
+    "GF24865001 - PACE DC - CO-OP SECTION":
+    [
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "DC Only (4 Weekly)"},
+      {"schemeCategory": "DC Only (4-weekly) from 10 June 2019"},
+      {"schemeCategory": "DC Only (Monthly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (4 Weekly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (Monthly)"}
+    ],
+    "GF26495001 - PACE DC - CO-OPERATIVE BANK SECTION AVCS":
+    [
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "DC Only (4 Weekly)"},
+      {"schemeCategory": "DC Only (Monthly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (4 Weekly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (Monthly)"},
+      {"schemeCategory": "Royal London:  Member has Pace DB Benefits"}
+    ],
+    "GF27865001 - THE M&S AVC SCHEME":[
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "DB AVC Existing Members"},
+      {"schemeCategory": "DB AVC New Members"}
+
+    ],
+    "GF62596001 - RBS GROUP RETIREMENT SAVINGS PLAN":
+    [
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "RBS RSP (GIB)"}
+    ],
+    "GF34865001 - PACE DC - CO-OP SECTION AVCS":
+    [
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "DC Only (4 Weekly)"},
+      {"schemeCategory": "DC Only (Monthly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (4 Weekly)"},
+      {"schemeCategory": "Members has Pace DB Benefits (Monthly)"},
+      {"schemeCategory": "Royal London:  Member has Pace DB Benefits"}
+    ],
+    "GF42075001 - IKEA RETIREMENT INCOME SCHEME":
+    [
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "AEA"},
+      {"schemeCategory": "AEDI"},
+      {"schemeCategory": "AEDUK"},
+      {"schemeCategory": "AEEx"},
+      {"schemeCategory": "Del IPs"},
+      {"schemeCategory": "OA"},
+      {"schemeCategory": "ODI"},
+      {"schemeCategory": "ODUK"},
+      {"schemeCategory": "OEx"},
+      {"schemeCategory": "TA"},
+      {"schemeCategory": "TDI"},
+      {"schemeCategory": "TEx"}
+    ],
+    "GF43184001 - SERCO":
+    [
+      {"schemeCategory": "No Filter"},
+      {"schemeCategory": "Doncaster Prisons Group Stakeholder Pension Scheme - FBS"},
+      {"schemeCategory": "Hassocksfield Stakeholder Pension-*-"},
+      {"schemeCategory": "Metrolink Manchester Payroll Group Stakeholder Pension - FBS"},
+      {"schemeCategory": "Prison Head Office Staff"},
+      {"schemeCategory": "Serco Partners & Children"},
+      {"schemeCategory": "AE Contributions"},
+      {"schemeCategory": "Dovegate Prisions Group Stakeholder Pension Scheme  -FBS"},
+      {"schemeCategory": "Kilmarnock Prison Payroll GSHP Scheme - FBS"},
+      {"schemeCategory": "Non AE Contributions"},
+      {"schemeCategory": "QAA Payroll Group Stakeholder Pension Scheme  - FBS"},
+      {"SCHEMECATEGORY": "SERCO STAKEHOLDER"},
+      {"SCHEMECATEGORY": "Cardiff Online"},
+      {"SCHEMECATEGORY": "Gulf Engineering Payroll GSHP Scheme - FBS"},
+      {"SCHEMECATEGORY": "Lowdham Grange Group Stakeholder Pension Scheme  -FBS"},
+      {"SCHEMECATEGORY": "Northampton Prisions Payroll Group Stakeholder Pension - FBS"},
+      {"SCHEMECATEGORY": "Resource Link Payroll Group Stakeholder Pension Scheme - FBS"},
+      {"SCHEMECATEGORY": "VIAPATH"}
+    ],
+    "GF48375001 - THE LEGAL & GENERAL MASTERTRUST (SOMERFIELD TRANSFER PLAN)":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "The Legal & General Mastertrust (Somerfield Transfer Plan)"}
+    ],
+  
+    "GF54037001 - FLEXIBLE RETIREMENT PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "Flexible Retirement Plan"}
+    ],
+    "GF32307001 - RBS GROUP RETIREMENT SAVINGS PLAN (GIB)":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "RBS RSP (Jersey)"},
+      {"SCHEMECATEGORY": "ABN LinK"},
+      {"SCHEMECATEGORY": "SL Members"},
+      {"SCHEMECATEGORY": "RBS RSP"}
+    ],
+
+    "GF63965001 - BARCLAYS PENSION SAVINGS PLAN": 
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "Barclays Pension Savings Plan"},
+      {"SCHEMECATEGORY": "Joiners pre March 2018"}
+    ],
+    "GF65737001 - ACCENTURE RETIREMENT SAVINGS PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "CISEC1"},
+      {"SCHEMECATEGORY": "ORBI01"},
+      {"SCHEMECATEGORY": "SPARG2"},
+      {"SCHEMECATEGORY": "SPFOR1"},
+      {"SCHEMECATEGORY": "SPNAG1"},
+      {"SCHEMECATEGORY": "SPQBE1"},
+      {"SCHEMECATEGORY": "SPUNI2"},
+      {"SCHEMECATEGORY": "AEEXE1"},
+      {"SCHEMECATEGORY": "Deferred Members"},
+      {"SCHEMECATEGORY": "SPADP1"},
+      {"SCHEMECATEGORY": "SPARS1"},
+      {"SCHEMECATEGORY": "SPJAV1"},
+      {"SCHEMECATEGORY": "SPNOK1"},
+      {"SCHEMECATEGORY": "SPSBCx"},
+      {"SCHEMECATEGORY": "SPVS01"},
+      {"SCHEMECATEGORY": "AESTN1"},
+      {"SCHEMECATEGORY": "DROGA1"},
+      {"SCHEMECATEGORY": "SPAL01"},
+      {"SCHEMECATEGORY": "SPBAR2"},
+      {"SCHEMECATEGORY": "SPO201"},
+      {"SCHEMECATEGORY": "SPSEA1"},
+      {"SCHEMECATEGORY": "SPWHI1"},
+      {"SCHEMECATEGORY": "AESTN2"},
+      {"SCHEMECATEGORY": "HRSTN1"},
+      {"SCHEMECATEGORY": "SPAL02"},
+      {"SCHEMECATEGORY": "SPCAP2"},
+      {"SCHEMECATEGORY": "SPKAR2"},
+      {"SCHEMECATEGORY": "SPO202"},
+      {"SCHEMECATEGORY": "SPSTN1"},
+      {"SCHEMECATEGORY": "SPWHI2"},
+      {"SCHEMECATEGORY": "AIRB01"},
+      {"SCHEMECATEGORY": "MDNO01"},
+      {"SCHEMECATEGORY": "SPARG1"},
+      {"SCHEMECATEGORY": "SPDYS1"},
+      {"SCHEMECATEGORY": "SPKS01"},
+      {"SCHEMECATEGORY": "SPO205"},
+      {"SCHEMECATEGORY": "SPUNI1"}
+    ],
+    "GF65927001 - SIEMENS HEALTHINEERS PENSION PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "Siemens Healthineers"}
+    ],
+    "GF68407001 - LONDON STOCK EXCHANGE GROUP PENSION PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "All Colleagues"}
+    ],
+    "GF71095001 - GREGGS PENSION SCHEME":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "Management & SE Grades"},
+      {"SCHEMECATEGORY": "Non-Management Grades"}
+    ],
+    "GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "Ex Stakeholder & SIPP Members"},
+      {"SCHEMECATEGORY": "Income Drawdown Category"},
+      {"SCHEMECATEGORY": "New Members"}
+    ],
+    "GF72027001 - KINGFISHER PENSION SCHEME":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "B&Q"},
+      {"SCHEMECATEGORY": "Kingfisher International Product Limited"},
+      {"SCHEMECATEGORY": "Kingfisher PlC"},
+      {"SCHEMECATEGORY": "KITs"},
+      {"SCHEMECATEGORY": "Linked Members - no direct communications to members (DB)"},
+      {"SCHEMECATEGORY": "Multiple period of service members (DB)"},
+      {"SCHEMECATEGORY": "Screwfix"}
+    ],
+    "GF74927001 - MITCHELLS & BUTLERS EXECUTIVE PENSION PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "DB Exec AVC Deferred Member"},
+      {"SCHEMECATEGORY": "DB Exec AVC Member"},
+      {"SCHEMECATEGORY": "DB/DC Deferred Members Executive Plan"},
+      {"SCHEMECATEGORY": "Executive Deferred Member"},
+      {"SCHEMECATEGORY": "Executive Plan"},
+      {"SCHEMECATEGORY": "Executive Plan DB/DC"},
+      {"SCHEMECATEGORY": "Members Above the Lifetime Allowance - Deferred"}
+    ],
+
+    "GF75755001 - SAINSBURY'S SIPP":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "Existing Members"},
+      {"SCHEMECATEGORY": "New Members"}
+    ],
+    "GF83965001 - SAINSBURY'S PENSION SCHEME AVC":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "ARGOS AVC COLLEAGUES"},
+      {"SCHEMECATEGORY": "DB AVC Colleagues"}
+    ],
+    "GF89265001 - ALLIANCE HEALTHCARE AND BOOTS RETIREMENT SAVINGS PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "AHBRSP - Band A"},
+      {"SCHEMECATEGORY": "AHBRSP - Band B"},
+      {"SCHEMECATEGORY": "AHBRSP - Band C"},
+      {"SCHEMECATEGORY": "Auto Enrolment"},
+      {"SCHEMECATEGORY": "Family & Friends"}
+    ],
+    "GF90275001 - SAVE THE CHILDREN UK GROUP PERSONAL PENSION":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "SCUK"}
+    ],
+    "GF90637001 - SERCO WORKSAVE PENSION PLAN":
+    [
+      {"SCHEMECATEGORY": "No Filter"},
+      {"SCHEMECATEGORY": "AE Contributions"},
+      {"SCHEMECATEGORY": "Non AE Contributions"}
+    ]
+
+  }
+}
