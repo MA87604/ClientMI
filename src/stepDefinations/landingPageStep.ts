@@ -32,8 +32,7 @@ let pd = new ProtractorDownloadHelper();
 Then('user able to view fields in dashboard page', async () => {
 
   await browser.waitForAngularEnabled(false);
-  await browser.sleep(5000);
-
+  //await browser.sleep(5000);
   await browser.wait(ExpectedConditions.presenceOf(dp.header), 30000);
 
   await dp.header.getText().then(function (text)

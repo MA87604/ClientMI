@@ -42,7 +42,7 @@ export let config: Config = {
         
 },
       
-    specs: [
+    specs: [ //Name of the Spec file
         //'../src/features/client-mi.feature',//login
         '../src/features/spaces.feature', '../src/features/landingPage.feature',
         '../src/features/selectScheme.feature', '../src/features/serviceAgreement.feature',
@@ -50,22 +50,22 @@ export let config: Config = {
         '../src/features/memberInfo.feature', '../src/features/memberActivity.feature', '../src/features/contribution.feature',
         '../src/features/assetsUnderMgmt.feature','../src/features/retirement.feature','../src/features/schemeCategory.feature',
         //'../src/features/*.feature',
-    ], //Name of the Spec file
+    ], 
 
     cucumberOpts: {
         tags: [
-            //"@login", //tags to test specific test cases
+            //"@login", //Choose tags to test specific test cases
             //"@landing",
             //"@scheme",
             //"@serviceLevelAgreement",
             //"@optOut",
-            "@memberOnlineEngagement",
+            //"@memberOnlineEngagement",
             //"@memberInfo",
             //"@memberActivity",
             //"@contribution",
-            //"@assetUnderMgmt",
+            "@assetUnderMgmt",
             //"@retirement",
-            //"@schemeCategory" 
+           // "@schemeCategory" 
             
         ],
         format: 'json:./cucumber_report.json',

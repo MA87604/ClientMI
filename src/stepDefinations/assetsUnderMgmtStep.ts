@@ -18,7 +18,7 @@ let bf = new basicFields();
 let expect = chai.expect;
 let should = chai.should;
 let space = new chooseSpaces();
-let path = "C:\\Automation\\ClientMI - Copy\\data\\assetUnderMgmt.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\assetUnderMgmt.xlsx";
 
 
 Given('user logged into the {string} dashboard', async (string) => {
@@ -61,7 +61,7 @@ When('user navigates to Overview of assets under management', async () => {
 
 Then('user able to view the basic fields in the page for the {string}', async (scheme) => {
 
-  await browser.waitForAngularEnabled(false);
+  //await browser.waitForAngularEnabled(false);
 
   //await sp.schemeFilter(sc.schemeCategory, sc.search, sc.radioBtn, sc.maxMinButton, string);
 
@@ -82,7 +82,7 @@ Then('user able to view the basic fields in the page for the {string}', async (s
   await excel.excelWriteOperationString(path, 5, 3, am.totAssetInvestedInLifestyleFund, scheme);
   await browser.sleep(2000);
 
-  await sp.lookForElement(am.defaultStratPolicies, 'Policies invested in default strategy - ', 'Policies invested in default strategy is missing');
+  /*await sp.lookForElement(am.defaultStratPolicies, 'Policies invested in default strategy - ', 'Policies invested in default strategy is missing');
   
   await sp.lookForElement(am.otherStratPolicies, 'Policies invested in other strategy - ', 'Policies invested in other strategy is missing');
 
@@ -123,7 +123,7 @@ Then('user able to view the basic fields in the page for the {string}', async (s
   await browser.sleep(3000);
 
   await sp.lookForElement(am.fundDemographic, 'Fund demographics on date of valuation graph is visible', 'Fund demographics on date of valuation graph is missing');
- 
+ */
 
 })
 

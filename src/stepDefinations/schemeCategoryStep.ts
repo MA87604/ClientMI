@@ -23,7 +23,7 @@ let sp = new schemePage();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
-let path = "C:\\Automation\\ClientMI - Copy\\data\\schemeCategory.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\schemeCategory.xlsx";
 
 
 When('user navigates to Scheme Category Overview', async () => {

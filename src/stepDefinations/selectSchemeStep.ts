@@ -24,7 +24,7 @@ let lp = new landingPage();
 let wd = new workplaceDashboard();
 let expect = chai.expect;
 
-let path = "C:\\Automation\\ClientMI - Copy\\data\\scheme.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\landingPage.xlsx";
 
 Given('user select the scheme {string}', async (schemeId) => {
  

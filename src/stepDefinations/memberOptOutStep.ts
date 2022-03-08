@@ -22,7 +22,7 @@ let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
 
-let path = "C:\\Automation\\ClientMI - Copy\\data\\memberOptOut.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\memberOptOut.xlsx";
 
 
 When('user navigates to Member Opt Out Overview', async () => {

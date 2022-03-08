@@ -20,7 +20,7 @@ let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
-let path = "C:\\Automation\\ClientMI - Copy\\data\\contributions.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\contributions.xlsx";
 
 
 

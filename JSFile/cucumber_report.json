@@ -1,0 +1,97 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "view-overview-of-assets-under-management;user-able-to-view-overview-of-assets-under-management",
+        "keyword": "Scenario Outline",
+        "line": 4,
+        "name": "User able to view Overview of assets under management",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user logged into the \"My Scheme Intelligence Dashboard\" dashboard",
+            "match": {
+              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14249000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user select the scheme \"GF61865001 - YOUR SODEXO RETIREMENT PLAN\"",
+            "match": {
+              "location": "..\\src\\stepDefinations\\selectSchemeStep.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61945000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user navigates to Overview of assets under management",
+            "match": {
+              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "user able to view the basic fields in the page for the \"GF61865001 - YOUR SODEXO RETIREMENT PLAN\"",
+            "match": {
+              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17272000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@assetUnderMgmt",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "view-overview-of-assets-under-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "View Overview of assets under management",
+    "tags": [],
+    "uri": "..\\src\\features\\assetsUnderMgmt.feature"
+  }
+]

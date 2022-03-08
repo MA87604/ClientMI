@@ -25,7 +25,7 @@ let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
-let path = "C:\\Automation\\ClientMI - Copy\\data\\memberActivity.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\memberActivity.xlsx";
 
 When('user navigates to Member Activity Overview', async () => {
 

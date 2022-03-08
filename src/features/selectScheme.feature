@@ -10,7 +10,8 @@ Feature: Select a scheme
 
     Examples:
         |schemeId | space |
-        |GF74927001 - MITCHELLS & BUTLERS EXECUTIVE PENSION PLAN |My Scheme Intelligence Dashboard|
+        |GF61865001 - YOUR SODEXO RETIREMENT PLAN|My Scheme Intelligence - Production Staging|
+        #|GF74927001 - MITCHELLS & BUTLERS EXECUTIVE PENSION PLAN |My Scheme Intelligence Dashboard|
         #|GF06865001 - YOUR M & S PENSION SAVING PLAN|
         #|GF15927001 - MITCHELLS & BUTLERS PENSION PLAN |
         #|GF10606001 - THE TESCO RETIREMENT SAVINGS PLAN|
@@ -46,6 +47,7 @@ Feature: Select a scheme
         #| GF74327001 - OSPS INVESTMENT BUILDER |
         #| GF98696001 - RSPB DC PENSION SCHEME|
         #| GF99556001 - THE NORCROS SECURITY PLAN|
+        #|GF61865001 - YOUR SODEXO RETIREMENT PLAN|
         
 
        

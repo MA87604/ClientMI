@@ -17,7 +17,7 @@ let ro = new retirementOverview();
 let sp = new schemePage();
 let expect = chai.expect;
 let should = chai.should;
-let path = "C:\\Automation\\ClientMI - Copy\\data\\retirement.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\retirement.xlsx";
 
 
 When('user navigates to Retirement Overview', async () => {
@@ -78,7 +78,7 @@ Then('user able to view Retirement Overview filter {string} for {string}', async
 
   await sp.lookForElement(ro.totMember, 'Total Members - ', 'Total Memebers are missing');
   await browser.sleep(3000);
-  await excel.excelWriteOperation(path, 8, 3, ro.totMember, schemeId);
+  await excel.excelWriteOperationString(path, 8, 3, ro.totMember, schemeId);
   await browser.sleep(2000);
 
   await sp.lookForElement(ro.upcomingRetirementInDateRange, 'Upcoming retirements in date range are- ', 'Upcoming retirements in date range are missing');

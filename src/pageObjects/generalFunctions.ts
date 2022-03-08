@@ -120,7 +120,7 @@ export class basicFields {
   async bookmarks(string) {
     await dp.bookmark.click();
     await console.log("Bookmark in the toolbar has been clicked");
-    await browser.sleep(3000);
+    //await browser.sleep(3000);
     await browser.wait(ExpectedConditions.elementToBeClickable(dp.plusBtn), 30000).then(function () {
       dp.plusBtn.click();
       dp.bookmarkText.sendKeys(protractor.Key.CONTROL, "a", protractor.Key.DELETE);
@@ -129,7 +129,7 @@ export class basicFields {
     })
       
     await dp.bookmarkClose.click();
-    await browser.sleep(3000);
+    //await browser.sleep(3000);
     await console.log("bookmark has been closed");
   }
 

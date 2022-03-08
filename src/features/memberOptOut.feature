@@ -11,4 +11,4 @@ Scenario Outline: User able to View Member Opt Out Overview
 
         Examples:
         |space |schemeId |options|gender|age|
-        |My Scheme Intelligence Dashboard|GF15927001 - MITCHELLS & BUTLERS PENSION PLAN|Home Retail Group AE Population|Male|All|
+        |My Scheme Intelligence - Production Staging|GF61865001 - YOUR SODEXO RETIREMENT PLAN|Home Retail Group AE Population|Male|All|

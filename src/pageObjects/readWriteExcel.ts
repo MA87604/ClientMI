@@ -38,22 +38,7 @@ export class excelReadAndWrite {
     })
   }
   
-  /*async excelWriteOperation(excelFilePath, data, i, j) {
-
-    browser.manage().timeouts().implicitlyWait(30000);
-
-    // create object for workbook
-    var wb = new Workbook();
-    // read xlsx file type
-    wb.xlsx.readFile(excelFilePath).then(function () {
-      //sheet object
-      let sheet: Worksheet = wb.getWorksheet("Sheet1");
-      // write to excel sheet
-      //sheet.getRow(1).getCell(2).value = data;
-      sheet.getRow(i).getCell(j).value = data;
-      wb.xlsx.writeFile(excelFilePath);
-    })
-  }*/
+  
     
 
   async excelWriteOperation(excelFilePath, i, j, elem1:ElementFinder,schemeId) {
@@ -104,6 +89,7 @@ export class excelReadAndWrite {
           "GF74327001 - OSPS INVESTMENT BUILDER": "Sheet33", 
           "GF98696001 - RSPB DC PENSION SCHEME": "Sheet34",
           "GF99556001 - THE NORCROS SECURITY PLAN": "Sheet35",
+          "GF61865001 - YOUR SODEXO RETIREMENT PLAN":"Sheet36",                                 
         }
         
         //sheet object
@@ -169,6 +155,7 @@ export class excelReadAndWrite {
           "GF74327001 - OSPS INVESTMENT BUILDER": "Sheet33", 
           "GF98696001 - RSPB DC PENSION SCHEME": "Sheet34",
           "GF99556001 - THE NORCROS SECURITY PLAN": "Sheet35",
+          "GF61865001 - YOUR SODEXO RETIREMENT PLAN":"Sheet36",
         }
         //sheet object
         
@@ -186,11 +173,6 @@ export class excelReadAndWrite {
     })
   }
 
-
-
-
-
- 
 
 
   async excelWriteOperation1(excelFilePath, i, j, elem1:ElementArrayFinder,schemeId) {
@@ -241,6 +223,7 @@ export class excelReadAndWrite {
           "GF74327001 - OSPS INVESTMENT BUILDER": "Sheet33", 
           "GF98696001 - RSPB DC PENSION SCHEME": "Sheet34",
           "GF99556001 - THE NORCROS SECURITY PLAN": "Sheet35",
+          "GF61865001 - YOUR SODEXO RETIREMENT PLAN":"Sheet36", 
         }
         //sheet object
         

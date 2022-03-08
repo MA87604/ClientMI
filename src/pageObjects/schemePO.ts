@@ -130,11 +130,13 @@ export class schemePage {
     await elem1.click();
     await console.log("select a scheme ID has been selected");
     await browser.sleep(10000);//manually select the scheme
-    //await elem2.sendKeys(schemeId, protractor.Key.ENTER);
-       // await browser.sleep(4000);
-       // await elem3.click();
-       // await browser.sleep(4000);
-       // await elem4.click();
+    await elem2.sendKeys(schemeId, protractor.Key.ENTER);
+    await browser.sleep(4000);
+    await elem3.click();
+    await browser.sleep(4000);
+    await elem4.click();
+    
+    
     //wait to manually click maximise icon
     // Move mouse over the button
    
@@ -142,19 +144,19 @@ export class schemePage {
     //elm[0].click();
     //});
     
-    await browser.driver.actions().mouseMove(element(by.css('cdk-overlay-container'))).perform();
-    await element(by.css('cdk-overlay-container')).then(function (elm) {
+   // await browser.driver.actions().mouseMove(element(by.css('cdk-overlay-container'))).perform();
+    //await element(by.css('cdk-overlay-container')).then(function (elm) {
 
-      browser.driver.actions().mouseMove(element(by.css('cdk-overlay-connected-position-bounding-box'))).perform();
-      element(by.css('cdk-overlay-connected-position-bounding-box')).then(function (elm1) {
+     // browser.driver.actions().mouseMove(element(by.css('cdk-overlay-connected-position-bounding-box'))).perform();
+     // element(by.css('cdk-overlay-connected-position-bounding-box')).then(function (elm1) {
   
-        elem2.sendKeys(schemeId, protractor.Key.ENTER);
-        browser.sleep(4000);
-        elem3.click();
-        browser.sleep(4000);
-        elem4.click();
-      })
-    })
+       // elem2.sendKeys(schemeId, protractor.Key.ENTER);
+      //  browser.sleep(4000);
+      //  elem3.click();
+     //   browser.sleep(4000);
+     //   elem4.click();
+     // })
+   // })
   
 
   }

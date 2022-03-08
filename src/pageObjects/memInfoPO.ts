@@ -99,10 +99,10 @@ export class memInfo {
     this.logo = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[4]/dashlet/div/report/image-report/img"));
 
     this.memberInfoDetailReport = element(by.xpath("//a[text() = 'Member Information Detail Report']"));
-    this.table1Header = element(by.id("tableChart_206")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
-    this.row1 = element(by.id("tableChart_206")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.summaryText = element(by.id("tableChart_206")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
-    //this.table1Header = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]/div/div/div[1]/div[1]/div[1]/div/span"));
+    this.table1Header = element(by.id("tableChart_189")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
+    this.row1 = element(by.id("tableChart_189")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.summaryText = element(by.id("tableChart_189")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
+    //this.table1Header = 206element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]/div/div/div[1]/div[1]/div[1]/div/span"));
 
 
     

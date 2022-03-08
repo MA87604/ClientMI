@@ -24,7 +24,7 @@ let dp = new landingPage();
 let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
-let path = "C:\\Automation\\ClientMI - Copy\\data\\memberInformation.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\memberInformation.xlsx";
 
 
 When('user navigates to Member Information Overview', async () => {
@@ -51,9 +51,10 @@ Then('user able to view {string} Member Information Overview filter {string}, {s
 
   //await sp.schemeFilter(mi.schemeCategory, mi.search, mi.radioBtn, mi.minMaxBtn, scheme);
 
-  //await ga.genderRadioBtn(mi.chooseGender, mi.search1, mi.radioBtn1, mi.radioBtn2, mi.minMaxBtn1, gender);
+  await ga.genderRadioBtn(mi.chooseGender, mi.search1, mi.radioBtn1, mi.radioBtn2, mi.minMaxBtn1, gender);
 
-  //await ga.ageFilter(mi.ageBand, mi.search2, mi.chkBox, mi.applyBtn, mi.chkAll, ageband);
+  await ga.ageFilter(mi.ageBand, mi.search2, mi.chkBox, mi.applyBtn, mi.chkAll, ageband);
+  
   //await ga.ageFilter(mi.age, mi.search3, mi.chkBox2, mi.applyBtn, mi.chkAll, age);
   
   await browser.sleep(5000);
@@ -97,7 +98,7 @@ Then('user able to view {string} Member Information Overview filter {string}, {s
 
   await sp.lookForElement(mi.avgMaleAge, 'Average male member age is - ', 'Average male member age is missing');
 
-  await sp.lookForElement(sp.map, 'Map to show no. of members by postcode is visible', 'Map to show no. of members by postcode is missing');
+  /*await sp.lookForElement(sp.map, 'Map to show no. of members by postcode is visible', 'Map to show no. of members by postcode is missing');
  
   await sp.lookForElement(mi.memPolicyStartDt, 'Member by policy scheme start date graph is visible', 'Member by policy scheme start date graph is missing');
 
@@ -113,7 +114,7 @@ Then('user able to view {string} Member Information Overview filter {string}, {s
 
   await sp.lookForElement(mi.memByAgeActiveDeferred, 'Member by age and active or deferred graph is visible', 'Member by age and active or deferred graph is missing');
 
-
+*///await browser.sleep(5000);
   await dp.browseCollection.click();
 
   await mi.memberInfoDetailReport.click();

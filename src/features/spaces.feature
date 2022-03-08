@@ -8,7 +8,7 @@ Feature: Choose spaces
     Examples:
         |spaces    |
         #|My Scheme Intelligence - Development   | 
-        #|My Scheme Intelligence - Production Staging   | 
-        |My Scheme Intelligence Dashboard   | 
+        |My Scheme Intelligence - Production Staging   | 
+        #|My Scheme Intelligence Dashboard   | 
         #|My Scheme Intelligence Dashboard V02   |   
 

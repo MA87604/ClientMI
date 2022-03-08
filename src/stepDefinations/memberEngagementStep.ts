@@ -25,7 +25,7 @@ let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
-let path = "C:\\Automation\\ClientMI - Copy\\data\\memberOnlineEngagement.xlsx";
+let path = "C:\\Automation\\ClientMI\\data\\memberOnlineEngagement.xlsx";
 
 
 When('user navigates to Member Online Engagements Overview', async () => {
