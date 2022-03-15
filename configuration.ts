@@ -65,7 +65,7 @@ export let config: Config = {
             //"@contribution",
             "@assetUnderMgmt",
             //"@retirement",
-           // "@schemeCategory" 
+           //"@schemeCategory" 
             
         ],
         format: 'json:./cucumber_report.json',
@@ -101,7 +101,8 @@ export let config: Config = {
         await browser.waitForAngularEnabled(false);
         await browser.get("https://login.eu1.birst.com/");
         await browser.manage().window().maximize();
-        await element(by.id("username")).sendKeys(username);
+        await browser.manage().window().getSize();
+                await element(by.id("username")).sendKeys(username);
         await element(by.id("password")).sendKeys(password);
         await element(by.css("button.btn.submit")).click();
         await browser.manage().timeouts().implicitlyWait(30000);

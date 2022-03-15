@@ -54,14 +54,17 @@ Given('user select the {string}', async (schemeId) => {
 })
     
 When('user navigates to Overview of assets under management', async () => {
-  await browser.sleep(5000);
+  //await browser.sleep(5000);
+  //return protractor.promise.all([
+  //  await expect(browser.isElementPresent(sp.fundsUnderMgmtLink)).equals(true)]);
+  await browser.wait(ExpectedConditions.visibilityOf(sp.fundsUnderMgmtLink), 30000);
   await sp.fundsUnderMgmtLink.click();
   await browser.sleep(10000);
 })
 
 Then('user able to view the basic fields in the page for the {string}', async (scheme) => {
 
-  //await browser.waitForAngularEnabled(false);
+  await browser.waitForAngularEnabled(false);
 
   //await sp.schemeFilter(sc.schemeCategory, sc.search, sc.radioBtn, sc.maxMinButton, string);
 

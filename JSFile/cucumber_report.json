@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14249000000
+              "duration": 14018000000
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 61945000000
+              "duration": 43039000000
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15123000000
+              "duration": 10156000000
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 10,
             "name": "user able to view the basic fields in the page for the \"GF61865001 - YOUR SODEXO RETIREMENT PLAN\"",
             "match": {
-              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:62"
+              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:65"
             },
             "result": {
               "status": "passed",
-              "duration": 17272000000
+              "duration": 17371000000
             }
           },
           {
@@ -74,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 27000000
+              "duration": 13000000
             }
           }
         ],

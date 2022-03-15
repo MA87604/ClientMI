@@ -37,7 +37,7 @@ Given('user select the scheme {string}', async (schemeId) => {
   await sp.selectScheme(lp.schemeCombobox, lp.searchbutton, lp.radioBtn, lp.maxMinButton, schemeId);
 
   
-  await sp.lookForElement(sp.groupName, 'Group name is - ', 'Group name is not present');
+  /*await sp.lookForElement(sp.groupName, 'Group name is - ', 'Group name is not present');
   await browser.sleep(2000);
   await excel.excelWriteOperationString(path, 3, 3, sp.groupName, schemeId);
   await browser.sleep(2000);
@@ -66,7 +66,7 @@ Given('user select the scheme {string}', async (schemeId) => {
   await browser.sleep(2000);
   await excel.excelWriteOperationString(path, 8, 3, sp.autoEnrolDate, schemeId);
   await browser.sleep(2000);
-
+*/
 
   let frame1: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[24]/dashlet/div/report/web-page-report/iframe")).getWebElement();
   

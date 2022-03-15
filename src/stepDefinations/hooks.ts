@@ -11,8 +11,6 @@ After(async function(scenario) {
     if (scenario.result.status === Status.FAILED) {
         // screenShot is a base-64 encoded PNG
          const screenShot = await browser.takeScreenshot();
-         //const image = Buffer.alloc(screenShot,length,screenShot,'base64')
-         //scenario.attach(image, "image/png");
          this.attach(screenShot,"image/png")
     }
 });

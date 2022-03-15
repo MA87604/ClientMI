@@ -46,7 +46,7 @@ Then('user able to view the Member Information fields in the page', async () => 
 
 })
 
-Then('user able to view {string} Member Information Overview filter {string}, {string}, {string} and {string}', async (schemeId, scheme, gender, ageband, age) => {
+Then('user able to view {string} Member Information Overview filter {string}, {string} and {string}', async (schemeId, gender, ageband, age) => {
 
 
   //await sp.schemeFilter(mi.schemeCategory, mi.search, mi.radioBtn, mi.minMaxBtn, scheme);
