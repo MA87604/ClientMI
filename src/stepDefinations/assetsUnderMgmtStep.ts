@@ -18,7 +18,7 @@ let bf = new basicFields();
 let expect = chai.expect;
 let should = chai.should;
 let space = new chooseSpaces();
-let path = "C:\\Automation\\ClientMI\\data\\assetUnderMgmt.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\assetUnderMgmt.xlsx";
 
 
 Given('user logged into the {string} dashboard', async (string) => {
@@ -26,7 +26,7 @@ Given('user logged into the {string} dashboard', async (string) => {
   await browser.wait(ExpectedConditions.elementToBeClickable(space.spaces), 6000).then(async () => {
     await space.spaces.click();
     await console.log("Spaces have been found");
-  })
+  });
   await space.chooseSpace(string, space.MySchemeIntelDev, space.MySchemeIntelProd, space.MySchemeIntelDash, space.MySchemeIntelDashv02);
 
   await browser.wait(ExpectedConditions.elementToBeClickable(space.closeNav), 30000);
@@ -43,28 +43,46 @@ Given('user select the {string}', async (schemeId) => {
 
   await bf.basicFieldWithoutFonts(lp.username, lp.date, lp.logo);
 
-  await sp.selectScheme(lp.schemeCombobox, lp.searchbutton, lp.radioBtn, lp.maxMinButton, schemeId);
+  await sp.selectScheme(lp.schemeCombobox, lp.searchbutton, lp.radioBtn, lp.minimizeButton,lp.expandButton, schemeId);
 
   let frame1: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[24]/dashlet/div/report/web-page-report/iframe")).getWebElement();
   await browser.switchTo().frame(frame1);
   await lp.viewAnalysisBtn.click();//click View Analysis table
-  await browser.sleep(10000);
+  // await browser.sleep(10000);
   await browser.waitForAngularEnabled(true); // workplace dashboard page open ups
-  
-})
-    
+});
+
 When('user navigates to Overview of assets under management', async () => {
-  //await browser.sleep(5000);
-  //return protractor.promise.all([
-  //  await expect(browser.isElementPresent(sp.fundsUnderMgmtLink)).equals(true)]);
-  await browser.wait(ExpectedConditions.visibilityOf(sp.fundsUnderMgmtLink), 30000);
-  await sp.fundsUnderMgmtLink.click();
-  await browser.sleep(10000);
-})
+  // browser.manage().window().setSize(1000, 760);
+  // await browser.sleep(2000);
+  // await browser.wait(ExpectedConditions.visibilityOf(sp.fundsUnderMgmtLink), 5000, "Asset Under Management link is not visible");
+  //  console.log("Asset Under Management link displayed");
+  // browser.wait(ExpectedConditions.elementToBeClickable(sp.fundsUnderMgmtLink), 5000);
+  // expect(browser.isElementPresent(sp.fundsUnderMgmtLink)).equals(true);
+  // await browser.actions().mouseMove(sp.fundsUnderMgmtLink, {x:14.9844,y:14.25}).click(sp.fundsUnderMgmtLink).perform();
+  // await browser.actions().mouseMove(sp.fundsUnderMgmtLink.getLocation()).sendKeys(" ").perform();
+  // await browser.executeScript('window.scrollTo(0,600);').then(function () {
+  //   console.log("Scrolled");
+  // });
+/*sp.fundsUnderMgmtLink.isPresent().then(function(elePresent){
+  if(elePresent) {
+    console.log("Link is present");
+  }
+  else{
+    console.log("Link is not present in DOM");
+  }
+});*/
+  sp.fundsUnderMgmtLink.click().then(function(){
+    console.log("Link Clicked");
+  });
+
+  // browser.executeScript("var element = document.querySelector('locator'); element.value = 'whatever';")
+  await browser.sleep(5000);
+});
 
 Then('user able to view the basic fields in the page for the {string}', async (scheme) => {
 
-  await browser.waitForAngularEnabled(false);
+  //await browser.waitForAngularEnabled(false);
 
   //await sp.schemeFilter(sc.schemeCategory, sc.search, sc.radioBtn, sc.maxMinButton, string);
 
@@ -128,7 +146,7 @@ Then('user able to view the basic fields in the page for the {string}', async (s
   await sp.lookForElement(am.fundDemographic, 'Fund demographics on date of valuation graph is visible', 'Fund demographics on date of valuation graph is missing');
  */
 
-})
+});
 
 
 //Then('user able to view filter {string}', async (string) => {

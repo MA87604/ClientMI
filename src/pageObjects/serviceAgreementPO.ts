@@ -47,11 +47,11 @@ export class serviceLevelAgreementPage {
     this.callgraph = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[22]/dashlet/div/report/visualizer-report/div/chart-visualization/div[1]/div[1]/div/canvas"));
     this.breakdownBtn = element(by.id("CallSwitcher"));
     this.breakdownGraph = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[21]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]"));
-    this.tableHeader = element(by.id("tableChart_163")).all(by.css("div.table-cell-outer-div.headerText.wrappedText > div > span"));
-    this.table1Header = element(by.id("tableChart_162")).all(by.css("div.table-cell-outer-div.headerText  > div > span"));
-    this.row1 = element(by.id("tableChart_163")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.row2 = element(by.id("tableChart_162")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.row4 = element(by.id("tableChart_162")).all(by.css("div.table-cell-outer-div.summaryText  > div > span"));
+    this.tableHeader = element(by.xpath("(//div[@class=\"table-view\"])[2]")).all(by.css("div.table-cell-outer-div.headerText.wrappedText > div > span"));
+    this.table1Header = element(by.xpath("(//div[@class=\"table-view\"])[1]")).all(by.css("div.table-cell-outer-div.headerText  > div > span"));
+    this.row1 = element(by.xpath("(//div[@class=\"table-view\"])[2]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.row2 = element(by.xpath("(//div[@class=\"table-view\"])[1]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.row4 = element(by.xpath("(//div[@class=\"table-view\"])[1]")).all(by.css("div.table-cell-outer-div.summaryText  > div > span"));
     
     this.schemeCategory = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[1]/dashlet/div/embedded-filter/mat-form-field/div/div[1]/div/mat-select"));
     this.search = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[1]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/mat-form-field/div/div[1]/div[2]/input"));

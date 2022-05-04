@@ -25,12 +25,12 @@ let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
-let path = "C:\\Automation\\ClientMI\\data\\memberActivity.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\memberActivity.xlsx";
 
 When('user navigates to Member Activity Overview', async () => {
 
-  
-  await browser.sleep(5000);
+  //browser.manage().window().setSize(900, 720);
+  await browser.sleep(2000);
   await sp.netMovementLink.click();
 
   await browser.sleep(10000);

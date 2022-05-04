@@ -7,14 +7,6 @@ var Excel = require('exceljs');
 let expect = chai.expect;
 
 
-
-
-
-
-
-
-
-
 export class excelReadAndWrite {
 
 

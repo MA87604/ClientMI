@@ -72,8 +72,8 @@ export class memberEngagementPage {
     this.memberByAgeGender = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[34]/dashlet/div/report/visualizer-report/div/chart-visualization/div[1]/div[1]/div/canvas"));
     this.barChart = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[40]/dashlet/div/report/visualizer-report/div/chart-visualization/div[1]/div[1]/div/canvas"));
     this.graphBreakdownBtn = element(by.id("AgeGenderSwitch"));
-    this.tableHeader1 = element(by.id("tableChart_171")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
-    this.row3 = element(by.id("tableChart_171")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.tableHeader1 = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
+    this.row3 = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
     this.map = element(by.css("svg.leaflet-zoom-animated"));
 
     this.breakdownBtn = element(by.id("OptOutSwitcher"));

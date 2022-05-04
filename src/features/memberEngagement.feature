@@ -1,7 +1,7 @@
 Feature: View Member Online Engagements Overview
 
 #@login
-@memberOnlineEngagement
+@memberOnlineEngagement  @Regression
 Scenario Outline: User able to view Member Online Engagements Overview
 
     Given user logged into the "<space>" dashboard
@@ -13,7 +13,7 @@ Scenario Outline: User able to view Member Online Engagements Overview
         Examples:
         |space |schemeId |options|gender|age|status|
         #|My Scheme Intelligence - Production Staging|GF83965001 - SAINSBURY'S PENSION SCHEME AVC|DB/DC Deferred Members Main Plan|Female|All|Active|
-        #|My Scheme Intelligence Dashboard|GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN|DB/DC Deferred Members Main Plan|Female|All|Active|
+        |My Scheme Intelligence Dashboard|GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN|DB/DC Deferred Members Main Plan|Female|All|Active|
         #|My Scheme Intelligence - Production Staging|GF75755001 - SAINSBURY'S SIPP|DB/DC Deferred Members Main Plan|Female|All|Active|
-        |My Scheme Intelligence Dashboard|GF61865001 - YOUR SODEXO RETIREMENT PLAN|DB/DC Deferred Members Main Plan|Female|All|Active|
+#        |My Scheme Intelligence Dashboard|GF61865001 - YOUR SODEXO RETIREMENT PLAN|DB/DC Deferred Members Main Plan|Female|All|Active|
      

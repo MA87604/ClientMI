@@ -24,7 +24,7 @@ let lp = new landingPage();
 let wd = new workplaceDashboard();
 let expect = chai.expect;
 
-let path = "C:\\Automation\\ClientMI\\data\\landingPage.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\landingPage.xlsx";
 
 Given('user select the scheme {string}', async (schemeId) => {
  
@@ -32,12 +32,9 @@ Given('user select the scheme {string}', async (schemeId) => {
 
   await bf.basicFieldWithoutFonts(lp.username, lp.date, lp.logo);
 
+  await sp.selectScheme(lp.schemeCombobox, lp.searchbutton, lp.radioBtn, lp.minimizeButton,lp.expandButton, schemeId);
   
-
-  await sp.selectScheme(lp.schemeCombobox, lp.searchbutton, lp.radioBtn, lp.maxMinButton, schemeId);
-
-  
-  /*await sp.lookForElement(sp.groupName, 'Group name is - ', 'Group name is not present');
+  await sp.lookForElement(sp.groupName, 'Group name is - ', 'Group name is not present');
   await browser.sleep(2000);
   await excel.excelWriteOperationString(path, 3, 3, sp.groupName, schemeId);
   await browser.sleep(2000);
@@ -66,7 +63,7 @@ Given('user select the scheme {string}', async (schemeId) => {
   await browser.sleep(2000);
   await excel.excelWriteOperationString(path, 8, 3, sp.autoEnrolDate, schemeId);
   await browser.sleep(2000);
-*/
+
 
   let frame1: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[24]/dashlet/div/report/web-page-report/iframe")).getWebElement();
   
@@ -74,9 +71,11 @@ Given('user select the scheme {string}', async (schemeId) => {
 
   await lp.viewAnalysisBtn.click();//click View Analysis button
 
-  await browser.sleep(10000);
+  await browser.sleep(5000);
 
-  })
+  await browser.switchTo().defaultContent();
+
+  });
 
 
 When('user navigates to Workplace dashboard', async () => {

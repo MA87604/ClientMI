@@ -36,11 +36,13 @@ export class assetUnderMgmt {
 
   constructor() {
 
-    this.totAssetsUnderMgmt= element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.totAssetInvestedInNonLifestyleFund = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[12]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.totAssetInvestedInLifestyleFund = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[13]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.defaultStratPolicies = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[15]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.otherStratPolicies = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[17]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.totAssetsUnderMgmt= element(by.xpath("//h2[contains(text(),' Total assets under management ')]/parent::div/div/span"));
+    // this.totAssetInvestedInNonLifestyleFund = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[14]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.totAssetInvestedInNonLifestyleFund = element(by.xpath("//h2[contains(text(),'(Non lifestyle profile) ')]/parent::div/div/span"));
+    this.totAssetInvestedInLifestyleFund = element(by.xpath("//h2[contains(text(),'lifestyle profiles ')]/parent::div/div/span"));
+    // this.totAssetInvestedInLifestyleFund = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[13]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.defaultStratPolicies = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[17]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.otherStratPolicies = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[19]/dashlet/div/report/kpi-report/div/div/div/span"));
   
     this.fundDemographic = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[36]/dashlet/div/report/visualizer-report/div/chart-visualization/div[1]/div[1]/div/canvas"));
     this.viewAllFundsBtn = element(by.id("DashletSwitcher"));
@@ -50,10 +52,10 @@ export class assetUnderMgmt {
     this.assetInvestedinDefaultStat = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[16]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.assetInvestedinOtherStat = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[18]/dashlet/div/report/kpi-report/div/div/div/span"));
 
-    this.table1Header = element(by.id("tableChart_167")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
-    this.table2Header = element(by.id("tableChart_168")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
-    this.row1 = element(by.id("tableChart_167")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.row2 = element(by.id("tableChart_168")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.table1Header = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
+    this.table2Header = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
+    this.row1 = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.row2 = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
 
     this.schemeCategory = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[1]/dashlet/div/embedded-filter/mat-form-field/div/div[1]/div/mat-select"));
     this.search = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[5]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/mat-form-field/div/div[1]/div[2]/input"))

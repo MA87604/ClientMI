@@ -25,15 +25,15 @@ let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
-let path = "C:\\Automation\\ClientMI\\data\\memberOnlineEngagement.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\memberOnlineEngagement.xlsx";
 
 
 When('user navigates to Member Online Engagements Overview', async () => {
-  await browser.sleep(2000);
-
+  //browser.manage().window().setSize(900, 720);
+  await browser.wait(ExpectedConditions.visibilityOf(sp.totalRegLink),5000);
   await sp.totalRegLink.click();
 
-  await browser.sleep(20000);
+  await browser.sleep(5000);
 })
 
 
@@ -105,7 +105,7 @@ Then('user able to view {string} Member Online Engagements filter {string}, {str
   await sp.lookForElement(mep.memberByAgeGender, 'Member by Age and gender graph is visible', 'Member by Age and gender graph is visible are missing');
   
   await sp.lookForElement(mep.map, 'Registrations by postcode map is visible', 'Registrations by postcode map is visible missing');
-  
+  await browser.executeScript("arguments[0].scrollIntoView();",mep.map);
   await mep.map.click();
 
   await browser.sleep(2000);

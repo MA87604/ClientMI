@@ -20,12 +20,15 @@ let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
-let path = "C:\\Automation\\ClientMI\\data\\contributions.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\contributions.xlsx";
+const date = new Date();
+
 
 
 
 When('user navigates to Contribution Overview', async () => {
-  await browser.sleep(5000);
+  //browser.manage().window().setSize(900, 720);
+  await browser.sleep(2000);
 
   await sp.memberContributionLink.click();
 
@@ -90,8 +93,28 @@ Then('user able to view {string} contribution filter {string}', async (scheme, s
   await sp.lookForElement(cont.employeeSingNonPayroll, 'Single Employee Non-Payroll contribution is - ', 'Single Employee Non-Payroll contribution is missing');
 
   await browser.sleep(3000);
+  // await browser.executeScript("arguments[0].click();", cont.maxBtn);
+  // await browser.wait(ExpectedConditions.visibilityOf(cont.editCurrentDate),5000);
+  // await cont.editCurrentDate.click();
+  // await cont.maxVal.sendKeys(date.getMonth()-1);
+  // await cont.doneButton.click();
+  // await browser.executeScript("arguments[0].click();", cont.minBtn);
+
   await dp.browseCollection.click();
-  await cont.contDetailReport.click();
+  await browser.executeScript("arguments[0].scrollIntoView();",cont.contributionAnalysisLink);
+  await cont.contributionAnalysisLink.click();
+  console.log("Contribution Analysis page displayed");
+  await browser.sleep(2000);
+  await browser.wait(ExpectedConditions.visibilityOf(cont.payrollAnalysisValue),10000);
+  await sp.lookForElement(cont.payrollAnalysisValue, 'Total Payroll contribution is - ', 'Total Payroll contribution is missing');
+  await cont.breakdownButton.click();
+  await sp.lookForElement(cont.employeeSingle, 'Single Employee Payroll contribution is - ', 'Single Employee Payroll contribution is missing');
+  await sp.lookForElement(cont.employeeRegular, 'Regular Employee Payroll contribution is - ', 'Regular Employee Payroll contribution is missing');
+  await sp.lookForElement(cont.employerSingle, 'Single Employer Payroll contribution is - ', 'Single Employer Payroll contribution is missing');
+  await sp.lookForElement(cont.employerRegular, 'Single Employer Payroll contribution is - ', 'Single Employer Payroll contribution is missing');
+
+
+/*  await cont.contDetailReport.click();
 
   await browser.sleep(5000);
   await sp.tableData(cont.table1Header, cont.row1);
@@ -101,7 +124,10 @@ Then('user able to view {string} contribution filter {string}', async (scheme, s
   await excel.excelWriteOperation1(path, 7, 3, cont.table1Header, scheme);
   await browser.sleep(2000);
   await excel.excelWriteOperation1(path, 8, 3, cont.row1, scheme);
-  await browser.sleep(2000);
+  await browser.sleep(2000);*/
+
+
+
 })
 
   //await sp.filterMethod(ma.schemeCategory1, ma.search1, ma.radioBtn1, ma.minMaxBtn1, string);

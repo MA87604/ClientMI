@@ -23,7 +23,7 @@ export class landingPage {
     advancedDataFilter: ElementFinder;
     campaignHub: ElementFinder;
     SchemeCombobox: ElementFinder;
-    maximizeTC: ElementFinder;
+    expandButton: ElementFinder;
     maximizeFAQ: ElementFinder;
     maximizeA: ElementFinder;
     maximizeHub: ElementFinder;
@@ -51,7 +51,7 @@ export class landingPage {
     download: ElementFinder;
     exportToggle: ElementFinder;
     printPDF: ElementFinder;
-    maxMinButton: ElementFinder;
+    minimizeButton: ElementFinder;
     overlay: ElementFinder;
     plusBtn: ElementFinder;
     bookmarkText: ElementFinder;
@@ -134,8 +134,8 @@ export class landingPage {
         this.tcPdf = element(by.id("plugin"));
         this.faqPdf = element(by.id("plugin"));
         this.searchbutton = element(by.id("mat-input-1"));
-        this.maxMinButton = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[7]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/div/button"));
-     
+        this.minimizeButton = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[7]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/div/button"));
+     this.expandButton = element(by.css("[data-mat-icon-name=\"expand\"]"));
         this.viewAnalysisBtn = element(by.id("Default"));
         this.groupName = element(by.css("div.text-center.kpi-details-section.ng-star-inserted:nth-child(1)"));
         this.exportToggle = element(by.id("mat-slide-toggle-4"));
