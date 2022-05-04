@@ -41,10 +41,9 @@ Then('user able to view fields in dashboard page', async () => {
     console.log( text + " dashboard page has been found");
   })
 
-  //await excel.excelWriteOperation("C:\\Automation\\ClientMI - Copy\\testFile.xlsx", 1, 2, dp.header,SCHEME);
+  //await excel.excelWriteOperation("C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main - Copy\\testFile.xlsx", 1, 2, dp.header,SCHEME);
 
   await bf.basicField(dp.username, dp.date, dp.logo);
-
 
     let frame6: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[5]/dashlet/div/report/web-page-report/iframe")).getWebElement();
     await dp.fieldText(frame6, dp.TCText, 'View terms and Conditions - ');
@@ -55,12 +54,12 @@ Then('user able to view fields in dashboard page', async () => {
     await dp.onClickTC.click();
     await console.log("Navigated to View Terms and Conditions Page");
     await nt.navigateTo("https://login.eu1.birst.com/apps/#/dashboards/94d059b4-5a9f-4970-a5e0-3383857b8959/pages/f380eab9-6d70-45c0-b8c4-51dce0e76879");
-    
+  await browser.switchTo().defaultContent();
     let frame10: WebElementPromise = element(by.xpath("//iframe[@src='https://entry.landg.com/CAWeb/LandGEntry?targetApp=MANAGEYOURSCHEME_DOCUMENTLIBRARY_ENTRY&reference=MySI_EULA_Document.pdf']")).getWebElement();
     await browser.switchTo().frame(frame10);
     await console.log("T&c frame has been clicked");
     await nt.navigateBack("https://login.eu1.birst.com/apps/#/dashboards/94d059b4-5a9f-4970-a5e0-3383857b8959/pages/cc25fbb0-d731-47c0-b048-8ee228d3bed9");
-    
+  await browser.switchTo().defaultContent();
     
     let frame7: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[31]/dashlet/div/report/web-page-report/iframe")).getWebElement();
     await dp.fieldText(frame7, dp.faqText, 'View FAQ - ');
@@ -74,14 +73,15 @@ Then('user able to view fields in dashboard page', async () => {
     await nt.navigateBack("https://login.eu1.birst.com/apps/#/dashboards/94d059b4-5a9f-4970-a5e0-3383857b8959/pages/cc25fbb0-d731-47c0-b048-8ee228d3bed9");
    
     await browser.sleep(5000);
-    
+  await browser.switchTo().defaultContent();
     
     let frame3: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[38]/dashlet/div/report/web-page-report/iframe")).getWebElement();
     
     await browser.switchTo().frame(frame3);
     await dp.analytics.click().then(function () {
     nt.navigateToNewTab("https://legalandgeneral.blob.core.windows.net/live-bc-publicdata/assets/110437/video.mp4", "Navigation Training Video");
-  })
+  });
+  await browser.switchTo().defaultContent();
   
 
     let frame8: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[34]/dashlet/div/report/web-page-report/iframe")).getWebElement();
@@ -97,7 +97,7 @@ Then('user able to view fields in dashboard page', async () => {
     await dp.advancedDataFilter.click().then(function () {
       nt.navigateToNewTab("https://legalandgeneral.blob.core.windows.net/live-bc-publicdata/assets/110436/video.mp4", "Advanced Data Filtering Video");
     })
-  
+  await browser.switchTo().defaultContent();
   
   //}
   //else if (string == 'Campaign Hub') {
@@ -117,7 +117,7 @@ Then('user able to view fields in dashboard page', async () => {
     })
   //}
 
-
+  await browser.switchTo().defaultContent();
   
   
 

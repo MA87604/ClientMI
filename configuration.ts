@@ -24,7 +24,10 @@ export let config: Config = {
             args: [
               '--disable-gpu',
               '--no-sandbox',
-              '--window-size=1024,768'
+              '--window-size=1024,768',
+                '--incognito'
+                // '--start-fullscreen'
+                // '--resolution=1920*1080'
             ]
           },
         acceptInsecureCerts: true,
@@ -39,7 +42,6 @@ export let config: Config = {
     
               }
         }
-        
 },
       
     specs: [ //Name of the Spec file
@@ -50,23 +52,24 @@ export let config: Config = {
         '../src/features/memberInfo.feature', '../src/features/memberActivity.feature', '../src/features/contribution.feature',
         '../src/features/assetsUnderMgmt.feature','../src/features/retirement.feature','../src/features/schemeCategory.feature',
         //'../src/features/*.feature',
-    ], 
-
+    ],
     cucumberOpts: {
         tags: [
-            //"@login", //Choose tags to test specific test cases
-            //"@landing",
-            //"@scheme",
-            //"@serviceLevelAgreement",
-            //"@optOut",
-            //"@memberOnlineEngagement",
-            //"@memberInfo",
-            //"@memberActivity",
+            //"@login", //Choose tags to test specific test cases -NA
+            // "@landing",// NA
+            // "@scheme", // NA
+            // "@serviceLevelAgreement", // NA
+            // "@optOut", // NA
+            // "@contribution",  //NA
+
+            // "@memberOnlineEngagement",
+            // "@memberInfo", //sainsbury data not available
+            // "@memberActivity",
             //"@contribution",
             "@assetUnderMgmt",
-            //"@retirement",
-           //"@schemeCategory" 
-            
+            // "@retirement",//sainsbury tolernce level FAIL
+           // "@schemeCategory", //Result column FAIL
+           //  "@Regression"
         ],
         format: 'json:./cucumber_report.json',
         require: ['../JSFile/src/stepDefinations/*.js'],
@@ -94,15 +97,17 @@ export let config: Config = {
     onPrepare: async () => {
         let username = 'monika.ahlawat@landg.com';
         let password = 'B1rstM!2@21';
+        // let username = 'namitha.n@landg.com';
+        // let password = 'B1rst!2022';
         //let username = 'neil.ramsay@landg.com';
         //let password = 'Ftins67@Yn';
-        
-        
+
         await browser.waitForAngularEnabled(false);
         await browser.get("https://login.eu1.birst.com/");
-        await browser.manage().window().maximize();
-        await browser.manage().window().getSize();
-                await element(by.id("username")).sendKeys(username);
+         await browser.manage().window().maximize();
+        // browser.driver.manage().window().setSize(900, 700);
+        await browser.sleep(5000);
+        await element(by.id("username")).sendKeys(username);
         await element(by.id("password")).sendKeys(password);
         await element(by.css("button.btn.submit")).click();
         await browser.manage().timeouts().implicitlyWait(30000);

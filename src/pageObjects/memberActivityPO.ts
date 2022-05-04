@@ -37,8 +37,8 @@ export class memActivity {
     this.memNetMovement = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[18]/dashlet/div/report/kpi-report/div/div/div/span[2]"));
     this.totCont = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[21]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.totPaymentOut = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[23]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.tableHeader = element(by.id("tableChart_153")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
-    this.row = element(by.id("tableChart_153")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.tableHeader = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
+    this.row = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
 
     this.schemeCategory = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[4]/dashlet/div/embedded-filter/mat-form-field/div/div[1]/div/mat-select"));
     this.search = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[4]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/mat-form-field/div/div[1]/div[2]/input"))

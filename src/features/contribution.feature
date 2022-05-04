@@ -11,4 +11,5 @@ Scenario Outline: User able to view Contribution Overview
 
     Examples:
         |space |schemeId |options|
-        |My Scheme Intelligence Dashboard|GF10606001 - THE TESCO RETIREMENT SAVINGS PLAN|DB/DC Deferred Members Main Plan|
+#        |My Scheme Intelligence Dashboard|GF10606001 - THE TESCO RETIREMENT SAVINGS PLAN|DB/DC Deferred Members Main Plan|
+        |My Scheme Intelligence Dashboard|GF61865001 - YOUR SODEXO RETIREMENT PLAN|DB/DC Deferred Members Main Plan|

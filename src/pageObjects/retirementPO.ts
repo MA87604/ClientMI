@@ -89,14 +89,20 @@ export class retirementOverview {
     this.logo = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[5]/dashlet/div/report/image-report/img"));
 
     this.retirementAnalysis = element(by.xpath("//a[text() = 'Retirement Analysis']"));
-    this.totMember = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[15]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.upcomingRetirementInDateRange = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[16]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.totMember = element(by.xpath("//h2[text()=' Total Members ']/parent::div//span[contains(@class,'kpi-measure')]"));
+    // this.totMember = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[5]/dashlet/div/report/kpi-report/div/div/div/span"));
+    // this.upcomingRetirementInDateRange = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[16]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.upcomingRetirementInDateRange = element(by.xpath("(/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div/dashlet/div/report/kpi-report/div/div/div/span)[6]"));
     this.upcomingRetirementActive = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[18]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.upcomingRetirementDeferred = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[20]/dashlet/div/report/kpi-report/div/div/div/span"));
 
-    this.table1Header = element(by.id("tableChart_211")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
-    this.row1 = element(by.id("tableChart_211")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.summaryText = element(by.id("tableChart_211")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
+    this.table1Header = element(by.xpath("(//visualizer-report//div[contains(@class,'table-view')])[2]")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
+    this.row1 = element(by.xpath("(//visualizer-report//div[contains(@class,'table-view')])[2]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.summaryText = element(by.xpath("(//visualizer-report//div[contains(@class,'table-view')])[2]")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
+
+    // this.table1Header = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
+    // this.row1 = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    // this.summaryText = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
   
   }
 }

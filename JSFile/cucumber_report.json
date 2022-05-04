@@ -10,6 +10,14 @@
         "name": "User able to view Overview of assets under management",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 6,
@@ -19,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14018000000
+              "duration": 16662000000
             }
           },
           {
@@ -32,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 43039000000
+              "duration": 56082000000
             }
           },
           {
@@ -41,11 +49,11 @@
             "line": 9,
             "name": "user navigates to Overview of assets under management",
             "match": {
-              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:56"
+              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:55"
             },
             "result": {
               "status": "passed",
-              "duration": 10156000000
+              "duration": 5202000000
             }
           },
           {
@@ -54,11 +62,11 @@
             "line": 10,
             "name": "user able to view the basic fields in the page for the \"GF61865001 - YOUR SODEXO RETIREMENT PLAN\"",
             "match": {
-              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:65"
+              "location": "..\\src\\stepDefinations\\assetsUnderMgmtStep.ts:83"
             },
             "result": {
               "status": "passed",
-              "duration": 17371000000
+              "duration": 17752000000
             }
           },
           {
@@ -74,13 +82,17 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 26000000
             }
           }
         ],
         "tags": [
           {
             "name": "@assetUnderMgmt",
+            "line": 3
+          },
+          {
+            "name": "@Regression",
             "line": 3
           }
         ],

@@ -44,33 +44,33 @@ export class genderAge {
   
   }
 
-  //await ga.genderRadioBtn(mi.chooseGender, mi.search1, mi.radioBtn1, mi.radioBtn2, mi.minMaxBtn1, gender);
+
   async genderRadioBtn(elem1: ElementFinder, elem2: ElementFinder, elem3: ElementFinder, elem4: ElementFinder, elem5: ElementFinder, gender) {
     await browser.sleep(4000);
     await elem1.click();//click combobox filter
     await console.log("Gender dropdown has been clicked");
     await browser.sleep(10000);
-    await elem2.click();//click search
+    /*await elem2.click();//click search
     await elem2.sendKeys(gender);//enter a scheme category
     await elem2.sendKeys(protractor.Key.ENTER);
-    await browser.sleep(10000);
-    if (gender == ('Female')) {
-      //await browser.wait(ExpectedConditions.presenceOf(elem3), 35000);
-      await elem3.click();
-      await console.log("Female checkbox has been selected");
-    }
-    else if (gender == 'Male') {
-      await browser.wait(ExpectedConditions.presenceOf(elem4), 40000);
+    await browser.sleep(3000);
+    if (gender == 'Male') {
+      browser.wait(ExpectedConditions.presenceOf(elem4), 40000);
       await elem4.click();
       await browser.sleep(2000);
       await console.log("Male checkbox has been selected");
     }
+    else if (gender == ('Female')) {
+      browser.wait(ExpectedConditions.presenceOf(elem3), 35000);
+      await elem3.click();
+      await console.log("Female checkbox has been selected");
   
+    }
     
     await browser.wait(ExpectedConditions.presenceOf(elem5), 50000).then(function () {
       elem5.click();
       browser.sleep(3000);
-    })
+    })*/
     
   }
   
@@ -82,31 +82,24 @@ export class genderAge {
     await browser.sleep(10000);
     //await browser.actions().mouseMove(sc.search).perform();
     //await sc.maxMinButton.click();
-    
-    await elem2.click();//click search
-    await elem2.sendKeys(age);//enter age
-    await elem2.sendKeys(protractor.Key.ENTER);
-    browser.wait(ExpectedConditions.presenceOf(elem3), 35000);
-    await elem3.click();
-    
     /*if (age == "All") {
       elem5.click();
     }
     else {
       await elem2.click();//click search
-      await elem2.sendKeys(age);//enter age
+      await elem2.sendKeys(age);//enter a scheme category
       await elem2.sendKeys(protractor.Key.ENTER);
       browser.wait(ExpectedConditions.presenceOf(elem3), 35000);
       await elem3.click();
       
-    }*/
+    }
     await browser.wait(ExpectedConditions.presenceOf(elem4), 3000).then(function () {
       elem4.click();
       console.log("Apply button has been clicked");
       }
       )
   
-    await browser.sleep(2000);
+    await browser.sleep(2000);*/
   }
 
 

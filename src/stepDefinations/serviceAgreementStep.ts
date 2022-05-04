@@ -23,12 +23,13 @@ let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
 
-let path = "C:\\Automation\\ClientMI\\data\\serviceLevelAgreement.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\serviceLevelAgreement.xlsx";
 
 
 
 When('user navigates to service level agreement overview', async () => {
-  await browser.sleep(5000);
+  //browser.manage().window().setSize(900, 720);
+  await browser.sleep(2000);
   await sp.serviceAgreementLink.click();
 
   await browser.sleep(10000);

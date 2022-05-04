@@ -1,6 +1,6 @@
 Feature: View the different sections in workplace dashboard
 
-    @landing
+    @landing @Regression
 
     Scenario Outline: User should be able to view different sections in the dashboard
 

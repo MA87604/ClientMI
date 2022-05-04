@@ -93,7 +93,7 @@ export class schemePage {
     this.date = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[1]/dashlet/div/report/text-report/div/div/p[3]/strong/span/strong/span"));
     this.logo = element(by.xpath("//img[@src='/SMIWeb/rest/v2/contents/68475605-2a21-4ac6-9e94-c1dd0826f19c/image?imagePath=%2Fshared%2Fimages%2FLogo%20-%20L%26G.png']"));
     this.serviceAgreement = element(by.xpath("//h2[text() = ' Service level agreement score ']"));
-    this.serviceAgreementLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[26]/dashlet/div/report/image-report/img"));
+    this.serviceAgreementLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[25]/dashlet/div/report/image-report/img"));
     this.optOutRate = element(by.xpath("//h2[text() = ' Opt out rate last 3 months ']"));
     this.totalReg = element(by.xpath("//h2[text() = ' Total online registrations ']"));
     this.memberToday = element(by.xpath("//h2[text() = ' Members  today ']"));
@@ -104,14 +104,14 @@ export class schemePage {
     this.countOfScheme = element(by.xpath("//h2[text() = ' Count of scheme categories ']"));
     //this.optOutRateLink = element(by.xpath("//img[@src='/SMIWeb/rest/v2/contents/68475605-2a21-4ac6-9e94-c1dd0826f19c/image?imagePath=%2Fshared%2Fimages%2Ficon-chevron-right.png']"));
   
-    this.optOutRateLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[25]/dashlet/div/report/image-report/img"));
-    this.totalRegLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[26]/dashlet/div/report/image-report/img"));
-    this.memberTodayLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[46]/dashlet/div/report/image-report/img"));
-    this.netMovementLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[47]/dashlet/div/report/image-report/img"));
-    this.memberContributionLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[48]/dashlet/div/report/image-report/img"));
-    this.fundsUnderMgmtLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[66]/dashlet/div/report/image-report/img"));
-    this.upcomingrRetirementLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[64]/dashlet/div/report/image-report/img"));
-    this.countOfSchemeLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[65]/dashlet/div/report/image-report/img"));
+    this.optOutRateLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[23]/dashlet/div/report/image-report/img"));
+    this.totalRegLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[24]/dashlet/div/report/image-report/img"));
+    this.memberTodayLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[44]/dashlet/div/report/image-report/img"));
+    this.netMovementLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[45]/dashlet/div/report/image-report/img"));
+    this.memberContributionLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[46]/dashlet/div/report/image-report/img"));
+    this.fundsUnderMgmtLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[64]/dashlet/div/report/image-report/img"));
+    this.upcomingrRetirementLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[62]/dashlet/div/report/image-report/img"));
+    this.countOfSchemeLink = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[63]/dashlet/div/report/image-report/img"));
     this.title = element(by.css("span.card-title"));
     this.map = element(by.css("svg.leaflet-zoom-animated"));
 
@@ -122,21 +122,19 @@ export class schemePage {
     this.renewalDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[21]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.autoEnrolDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[22]/dashlet/div/report/kpi-report/div/div/div/span"));
 
-   
   }
 
-  
-  async selectScheme(elem1: ElementFinder, elem2: ElementFinder, elem3: ElementFinder, elem4: ElementFinder, schemeId) {
+  async selectScheme(elem1: ElementFinder, elem2: ElementFinder, elem3: ElementFinder, elem4: ElementFinder,elem5: ElementFinder, schemeId) {
     await elem1.click();
     await console.log("select a scheme ID has been selected");
-    await browser.sleep(10000);//manually select the scheme
+  await browser.executeScript("arguments[0].click();", elem5);
+    await browser.sleep(5000);//manually select the scheme
     await elem2.sendKeys(schemeId, protractor.Key.ENTER);
     await browser.sleep(4000);
     await elem3.click();
     await browser.sleep(4000);
     await elem4.click();
-    
-    
+
     //wait to manually click maximise icon
     // Move mouse over the button
    

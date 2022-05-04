@@ -30,7 +30,8 @@ export class Contribution {
   schemeCategory: ElementFinder;
   search: ElementFinder;
   radioBtn: ElementFinder;
-  minMaxBtn: ElementFinder;
+  minBtn: ElementFinder;
+  maxBtn: ElementFinder;
 
   username: ElementFinder;
   dataAsOf: ElementFinder;
@@ -38,6 +39,17 @@ export class Contribution {
   contDetailReport: ElementFinder;
   table1Header: ElementArrayFinder;
   row1: ElementArrayFinder;
+
+  contributionAnalysisLink: ElementFinder;
+  breakdownButton: ElementFinder;
+  employeeSingle: ElementFinder;
+  employeeRegular: ElementFinder;
+  employerSingle: ElementFinder;
+  employerRegular: ElementFinder;
+  payrollAnalysisValue: ElementFinder;
+  editCurrentDate: ElementFinder
+  maxVal:ElementFinder
+  doneButton: ElementFinder;
 
   constructor() {
 
@@ -62,19 +74,28 @@ export class Contribution {
     this.schemeCategory = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[3]/dashlet/div/embedded-filter/mat-form-field/div/div[1]/div/mat-select"));
     this.search = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[3]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/mat-form-field/div/div[1]/div[2]/input"))
     this.radioBtn = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[3]/dashlet/div/embedded-filter/filter-selection/div[2]/div/filter-option-list/mat-radio-group/mat-radio-button[1]/label/span[1]"));
-    this.minMaxBtn = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[3]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/div/button"))
+    this.maxBtn = element(by.css("[class=\"mat-icon notranslate mat-icon-no-color icon-expand\"]"));
+    this.minBtn = element(by.css("[class=\"mat-icon notranslate mat-icon-no-color icon-collapse\"]"))
 
     this.username = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[5]/dashlet/div/report/text-report/div/div/p[2]/span/strong"));
     this.dataAsOf = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[5]/dashlet/div/report/text-report/div/div/p[3]/span/strong"));
     this.logo = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[4]/dashlet/div/report/image-report/img"));
 
     this.contDetailReport = element(by.xpath("//a[text() = 'Contribution Detail Report']"));
-    this.table1Header = element(by.id("tableChart_210")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
-    this.row1 = element(by.id("tableChart_210")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));//210
+    this.table1Header = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
+    this.row1 = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));//210
 
+    this.contributionAnalysisLink = element(by.xpath("//a[text()='Contribution Analysis']"));
+    this.breakdownButton = element(by.css("div[id=\"PayrollSwitcher\"] a"));
+    this.payrollAnalysisValue = element(by.xpath("//h2[text()=' Payroll ']/ancestor::dashlet[contains(@aria-label,'Payroll')]//span"));
+    this.employeeSingle = element(by.xpath("//*[@aria-label=\"Payroll Employee Single Contribution\"]//span"));
+    this.employeeRegular = element(by.xpath("//*[@aria-label=\"Payroll Employee Reg Contribution\"]//span"));
+    this.employerSingle = element(by.xpath("//*[@aria-label=\"Payroll Employer Single Contribution\"]//span"));
+    this.employerRegular = element(by.xpath("//*[@aria-label=\"Payroll Employer Reg Contribution\"]//span"));
 
-
-
+    this.editCurrentDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[16]/dashlet/div/embedded-filter/filter-selection/div/filter-slider/form/ngx-slider/span[8]"));
+this.maxVal = element(by.css("[aria-label=\"Enter max value\"]"));
+this.doneButton = element(by.xpath("//span[text()='Done']"));
 
   }
 }

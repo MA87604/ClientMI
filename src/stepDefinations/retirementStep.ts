@@ -17,18 +17,18 @@ let ro = new retirementOverview();
 let sp = new schemePage();
 let expect = chai.expect;
 let should = chai.should;
-let path = "C:\\Automation\\ClientMI\\data\\retirement.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\retirement.xlsx";
 
 
 When('user navigates to Retirement Overview', async () => {
-
-  await browser.sleep(5000);
+  //browser.manage().window().setSize(900, 720);
+  await browser.sleep(2000);
 
   await sp.upcomingrRetirementLink.click();
 
   await browser.sleep(10000);
 
-})
+});
 
 Then('user able to view the Retirement Overview fields in the page', async () => {
 
@@ -72,11 +72,12 @@ Then('user able to view Retirement Overview filter {string} for {string}', async
   await browser.sleep(2000);
 
   await dp.browseCollection.click();
-
+  await browser.wait(ExpectedConditions.visibilityOf(ro.retirementAnalysis),5000);
   await ro.retirementAnalysis.click();
-  await browser.sleep(6000);
-
-  await sp.lookForElement(ro.totMember, 'Total Members - ', 'Total Memebers are missing');
+  await browser.wait(ExpectedConditions.visibilityOf(ro.totMember),5000);
+  await browser.refresh();
+  await browser.sleep(5000);
+  await sp.lookForElement(ro.totMember, 'Total Members - ', 'Total Members are missing');
   await browser.sleep(3000);
   await excel.excelWriteOperationString(path, 8, 3, ro.totMember, schemeId);
   await browser.sleep(2000);

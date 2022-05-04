@@ -24,14 +24,13 @@ let dp = new landingPage();
 let space = new chooseSpaces();
 let expect = chai.expect;
 let should = chai.should;
-let path = "C:\\Automation\\ClientMI\\data\\memberInformation.xlsx";
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\memberInformation.xlsx";
 
 
 When('user navigates to Member Information Overview', async () => {
   await browser.waitForAngularEnabled(false);
-
-  await browser.sleep(5000);
-
+  //browser.manage().window().setSize(900, 720);
+  await browser.sleep(2000);
   await sp.memberTodayLink.click();
 
   await browser.sleep(20000);
@@ -46,10 +45,11 @@ Then('user able to view the Member Information fields in the page', async () => 
 
 })
 
-Then('user able to view {string} Member Information Overview filter {string}, {string} and {string}', async (schemeId, gender, ageband, age) => {
+Then('user able to view {string} Member Information Overview filter {string}, {string}, {string} and {string}', async (schemeId, scheme, gender, ageband, age) => {
 
 
   //await sp.schemeFilter(mi.schemeCategory, mi.search, mi.radioBtn, mi.minMaxBtn, scheme);
+//gender-female, age-31
 
   await ga.genderRadioBtn(mi.chooseGender, mi.search1, mi.radioBtn1, mi.radioBtn2, mi.minMaxBtn1, gender);
 
@@ -118,9 +118,7 @@ Then('user able to view {string} Member Information Overview filter {string}, {s
   await dp.browseCollection.click();
 
   await mi.memberInfoDetailReport.click();
-  await browser.sleep(8000);
-
-  
+  // await browser.wait(ExpectedConditions.visibilityOf(mi.table1Header),5000);
 
   await sp.tableData(mi.table1Header, mi.row1);
   await browser.sleep(3000);
