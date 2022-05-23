@@ -196,7 +196,9 @@ export class schemePage {
 
 
   async tableData(elem1: ElementArrayFinder, elem2: ElementArrayFinder) {
+    console.log("Table data ");
     await elem1.isPresent().then(function (isVisible) {
+      console.log("is visible: "+isVisible);
       if (isVisible) {
         elem1.getText().then(function (text) {
           console.log(text);

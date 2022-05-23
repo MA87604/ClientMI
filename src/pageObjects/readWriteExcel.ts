@@ -46,14 +46,15 @@ export class excelReadAndWrite {
       wb.xlsx.readFile(excelFilePath).then(async() => {
         
         let myhash = {
-          "GF15927001 - MITCHELLS & BUTLERS PENSION PLAN": "Sheet1",
-          "GF06865001 - YOUR M & S PENSION SAVING PLAN": "Sheet2",
+          "GF61865001 - YOUR SODEXO RETIREMENT PLAN": "Sheet1",
+          "GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN": "Sheet2",
+
           "GF10606001 - THE TESCO RETIREMENT SAVINGS PLAN": "Sheet3",
           "GF32307001 - RBS GROUP RETIREMENT SAVINGS PLAN (GIB)":"Sheet4",
           "GF43184001 - SERCO":"Sheet5",
           "GF62596001 - RBS GROUP RETIREMENT SAVINGS PLAN":"Sheet6",
           "GF65927001 - SIEMENS HEALTHINEERS PENSION PLAN":"Sheet7",
-          "GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN":"Sheet8",
+          "GF06865001 - YOUR M & S PENSION SAVING PLAN":"Sheet8",
           "GF75755001 - SAINSBURY'S SIPP":"Sheet9",
           "GF90275001 - SAVE THE CHILDREN UK GROUP PERSONAL PENSION":"Sheet10",
           "GF26495001 - PACE DC - CO-OPERATIVE BANK SECTION AVCS":"Sheet11",
@@ -81,7 +82,7 @@ export class excelReadAndWrite {
           "GF74327001 - OSPS INVESTMENT BUILDER": "Sheet33", 
           "GF98696001 - RSPB DC PENSION SCHEME": "Sheet34",
           "GF99556001 - THE NORCROS SECURITY PLAN": "Sheet35",
-          "GF61865001 - YOUR SODEXO RETIREMENT PLAN":"Sheet36",                                 
+          "GF15927001 - MITCHELLS & BUTLERS PENSION PLAN":"Sheet36",
         }
         
         //sheet object
@@ -112,14 +113,14 @@ export class excelReadAndWrite {
       wb.xlsx.readFile(excelFilePath).then(async() => {
         
         let myhash = {
-          "GF15927001 - MITCHELLS & BUTLERS PENSION PLAN": "Sheet1",
-          "GF06865001 - YOUR M & S PENSION SAVING PLAN": "Sheet2",
+          "GF61865001 - YOUR SODEXO RETIREMENT PLAN":"Sheet1",
+          "GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN":"Sheet2",
           "GF10606001 - THE TESCO RETIREMENT SAVINGS PLAN": "Sheet3",
           "GF32307001 - RBS GROUP RETIREMENT SAVINGS PLAN (GIB)":"Sheet4",
           "GF43184001 - SERCO":"Sheet5",
           "GF62596001 - RBS GROUP RETIREMENT SAVINGS PLAN":"Sheet6",
           "GF65927001 - SIEMENS HEALTHINEERS PENSION PLAN":"Sheet7",
-          "GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN":"Sheet8",
+          "GF06865001 - YOUR M & S PENSION SAVING PLAN": "Sheet8",
           "GF75755001 - SAINSBURY'S SIPP":"Sheet9",
           "GF90275001 - SAVE THE CHILDREN UK GROUP PERSONAL PENSION":"Sheet10",
           "GF26495001 - PACE DC - CO-OPERATIVE BANK SECTION AVCS":"Sheet11",
@@ -147,7 +148,7 @@ export class excelReadAndWrite {
           "GF74327001 - OSPS INVESTMENT BUILDER": "Sheet33", 
           "GF98696001 - RSPB DC PENSION SCHEME": "Sheet34",
           "GF99556001 - THE NORCROS SECURITY PLAN": "Sheet35",
-          "GF61865001 - YOUR SODEXO RETIREMENT PLAN":"Sheet36",
+          "GF15927001 - MITCHELLS & BUTLERS PENSION PLAN": "Sheet36"
         }
         //sheet object
         

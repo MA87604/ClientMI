@@ -86,7 +86,7 @@ When('user navigates to Workplace dashboard', async () => {
   await sp.lookForElement(lp.groupName, 'Group name is - ', 'Group name is not present');
   
 })
-/*
+
 Then('user able to view tiles in the dashboard', async () => {
 
   await bf.basicField(sp.username, sp.date, sp.logo);
@@ -136,7 +136,7 @@ Then('user able to browse collection & dasboards', async () => {
   await bf.exportButton();
 
 
-});*/
+});
   
 
 

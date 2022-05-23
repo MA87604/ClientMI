@@ -40,8 +40,6 @@ export class genderAge {
        console.log("Apply button has been clicked");
        browser.sleep(3000);
     })
-    
-  
   }
 
 

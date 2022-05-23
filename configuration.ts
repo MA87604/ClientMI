@@ -60,12 +60,12 @@ export let config: Config = {
             // "@scheme", // NA
             // "@serviceLevelAgreement", // NA
             // "@optOut", // NA
-            // "@contribution",  //NA
+
 
             // "@memberOnlineEngagement",
             // "@memberInfo", //sainsbury data not available
             // "@memberActivity",
-            //"@contribution",
+            // "@contribution",
             "@assetUnderMgmt",
             // "@retirement",//sainsbury tolernce level FAIL
            // "@schemeCategory", //Result column FAIL
@@ -95,10 +95,10 @@ export let config: Config = {
         reporter.generate(options);
     },
     onPrepare: async () => {
-        let username = 'monika.ahlawat@landg.com';
-        let password = 'B1rstM!2@21';
-        // let username = 'namitha.n@landg.com';
-        // let password = 'B1rst!2022';
+        // let username = 'monika.ahlawat@landg.com';
+        // let password = 'B1rstM!2@21';
+        let username = 'namitha.n@landg.com';
+        let password = 'B1rst!2022';
         //let username = 'neil.ramsay@landg.com';
         //let password = 'Ftins67@Yn';
 

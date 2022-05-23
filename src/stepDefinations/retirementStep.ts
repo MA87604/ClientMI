@@ -36,7 +36,7 @@ Then('user able to view the Retirement Overview fields in the page', async () =>
 
   await bf.basicFieldWithoutFonts(ro.username, ro.dataAsOf, ro.logo);
 
-})
+});
   
 Then('user able to view Retirement Overview filter {string} for {string}', async (scheme, schemeId) => {
 

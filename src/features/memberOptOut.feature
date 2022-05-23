@@ -11,4 +11,5 @@ Scenario Outline: User able to View Member Opt Out Overview
 
         Examples:
         |space |schemeId |options|gender|age|
-        |My Scheme Intelligence - Production Staging|GF61865001 - YOUR SODEXO RETIREMENT PLAN|Home Retail Group AE Population|Male|All|
+#        |My Scheme Intelligence - Production Staging|GF61865001 - YOUR SODEXO RETIREMENT PLAN|Home Retail Group AE Population|Male|All|
+        |My Scheme Intelligence Dashboard|GF71965001 - SAINSBURY'S RETIREMENT SAVINGS PLAN|Home Retail Group AE Population|Male|All|
