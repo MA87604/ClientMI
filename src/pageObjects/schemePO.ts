@@ -128,11 +128,13 @@ export class schemePage {
     await elem1.click();
     await console.log("select a scheme ID has been selected");
   await browser.executeScript("arguments[0].click();", elem5);
-    await browser.sleep(5000);//manually select the scheme
+    await browser.sleep(2000);
+    await browser.wait(ExpectedConditions.visibilityOf(elem2),5000);
     await elem2.sendKeys(schemeId, protractor.Key.ENTER);
-    await browser.sleep(4000);
+    await browser.sleep(2000);
+    await browser.wait(ExpectedConditions.visibilityOf(elem3),10000);
     await elem3.click();
-    await browser.sleep(4000);
+    await browser.sleep(2000);
     await elem4.click();
 
     //wait to manually click maximise icon
