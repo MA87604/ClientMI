@@ -49,11 +49,27 @@ export class retirementOverview {
   upcomingRetirementInDateRange: ElementFinder;
   upcomingRetirementActive: ElementFinder;
   upcomingRetirementDeferred: ElementFinder;
+  retirementDateFilter: ElementFinder;
+  retirementDetailReportHeader: ElementFinder;
 
   table1Header: ElementArrayFinder;
   row1: ElementArrayFinder;
+  summaryText1: ElementArrayFinder;
+
+  tableHeader: ElementArrayFinder;
+  row: ElementArrayFinder;
   summaryText: ElementArrayFinder;
-  
+
+  retirementDetailReportLink: ElementFinder;
+
+  schemeIDFilter: ElementFinder;
+  barGraphMembersByAgeAndGender: ElementFinder;
+  barGraphForthcomingRetByRetYears: ElementFinder;
+  barGraphForthcomingRet: ElementFinder;
+  bubbleActiveVsDeferred: ElementFinder;
+  filterButton: ElementFinder;
+
+
   constructor() {
 
     this.currentYear = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[15]/dashlet/div/report/kpi-report/div/div/div/span"));
@@ -96,13 +112,24 @@ export class retirementOverview {
     this.upcomingRetirementActive = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[18]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.upcomingRetirementDeferred = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[20]/dashlet/div/report/kpi-report/div/div/div/span"));
 
-    this.table1Header = element(by.xpath("(//visualizer-report//div[contains(@class,'table-view')])[2]")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
-    this.row1 = element(by.xpath("(//visualizer-report//div[contains(@class,'table-view')])[2]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.summaryText = element(by.xpath("(//visualizer-report//div[contains(@class,'table-view')])[2]")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
+    this.table1Header = element(by.xpath("//dashlet[@aria-label=\"Members by retirement age\"]//div[contains(@class,'table-view')]")).all(by.xpath("//div[@class=\"table-cell-outer-div headerText wrappedText\"]//div//span"));
+    this.row1 = element(by.xpath("//dashlet[@aria-label=\"Members by retirement age\"]//div[contains(@class,'table-view')]")).all(by.xpath("//div[@class=\"table-cell-outer-div headerText wrappedText\"]//div//span"));
+    this.summaryText1 = element(by.xpath("//dashlet[@aria-label=\"Members by retirement age\"]//div[contains(@class,'table-view')]")).all(by.xpath("//div[@class=\"table-cell-outer-div headerText wrappedText\"]//div//span"));
 
-    // this.table1Header = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
-    // this.row1 = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    // this.summaryText = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
-  
+    this.tableHeader = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.headerText.wrappedText> div > span"));
+    this.row = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.summaryText = element(by.css("[class=\"table-view\"]")).all(by.css("div.table-cell-outer-div.summaryText > div > span"));
+
+    this.retirementDetailReportHeader= element(by.xpath("//*[text()='Retirement Detail Report']"));
+    this.retirementDetailReportLink= element(by.xpath("//a[text()='Retirements Detail Report']"));
+
+    this.barGraphMembersByAgeAndGender= element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[25]/dashlet/div/report/visualizer-report/div/chart-visualization/div[1]/div[1]/div/canvas"));
+    this.barGraphForthcomingRetByRetYears= element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[26]/dashlet/div/report/visualizer-report/div/chart-visualization/div[1]/div[1]/div/canvas"));
+    this.barGraphForthcomingRet= element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[26]/dashlet/div/report/visualizer-report/div/chart-visualization/div[1]/div[1]/div/canvas"));
+    this.bubbleActiveVsDeferred= element(by.css("[aria-label=\"Active vs deferred by retirement year analysis with total policies as the bubble size\"]"));
+    this.filterButton = element(by.css("[data-mat-icon-name=\"filter\"]"));
+
+    this.schemeIDFilter= element(by.css("[aria-label='Open filter Scheme ID']"));
+this.retirementDateFilter= element(by.css("[aria-label=\"Open filter Retirement Date Filter\"]"));
   }
 }

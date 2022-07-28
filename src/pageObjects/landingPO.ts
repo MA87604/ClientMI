@@ -9,7 +9,7 @@ let expect = chai.expect;
 
 
 export class landingPage {
-
+    hiddenSearchButton:ElementFinder;
     header: ElementFinder;
     username: ElementFinder;
     date: ElementFinder;
@@ -133,7 +133,8 @@ export class landingPage {
         //this.download = element(by.css("cr-icon-button#download"));
         this.tcPdf = element(by.id("plugin"));
         this.faqPdf = element(by.id("plugin"));
-        this.searchbutton = element(by.id("mat-input-1"));
+        this.searchbutton = element(by.css("[formcontrolname=\"searchString\"]"));
+        this.hiddenSearchButton= element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[8]/dashlet/div/div[1]/div/div/button/span[1]/mat-icon/svg"))
         this.minimizeButton = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[7]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/div/button"));
      this.expandButton = element(by.css("[data-mat-icon-name=\"expand\"]"));
         this.viewAnalysisBtn = element(by.id("Default"));

@@ -118,22 +118,29 @@ export class schemePage {
     this.groupName = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[13]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.groupRef = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[14]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.companyName = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[15]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.startDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[20]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.renewalDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[21]/dashlet/div/report/kpi-report/div/div/div/span"));
-    this.autoEnrolDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[22]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.startDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[21]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.renewalDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[22]/dashlet/div/report/kpi-report/div/div/div/span"));
+    this.autoEnrolDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[20]/dashlet/div/report/kpi-report/div/div/div/span"));
 
   }
 
-  async selectScheme(elem1: ElementFinder, elem2: ElementFinder, elem3: ElementFinder, elem4: ElementFinder,elem5: ElementFinder, schemeId) {
-    await elem1.click();
-    await console.log("select a scheme ID has been selected");
-  await browser.executeScript("arguments[0].click();", elem5);
-    await browser.sleep(5000);//manually select the scheme
-    await elem2.sendKeys(schemeId, protractor.Key.ENTER);
-    await browser.sleep(4000);
-    await elem3.click();
-    await browser.sleep(4000);
-    await elem4.click();
+  async selectScheme(schemeComboBox: ElementFinder, searchbutton: ElementFinder, radioBtn: ElementFinder, minimizeButton: ElementFinder,expandButton: ElementFinder, schemeId,expandSearch:ElementFinder) {
+    await schemeComboBox.click();
+
+  await browser.executeScript("arguments[0].click();", expandButton);
+    await browser.sleep(2000);
+
+    await browser.executeScript("arguments[0].click();", expandSearch);
+    await browser.sleep(2000);
+    await console.log("Textbox displayed");
+    // await browser.wait(ExpectedConditions.visibilityOf(searchbutton),5000);
+    await searchbutton.sendKeys(schemeId, protractor.Key.ENTER);
+    await browser.sleep(6000);
+    await browser.wait(ExpectedConditions.visibilityOf(radioBtn),20000);
+    await browser.wait(ExpectedConditions.elementToBeClickable(radioBtn),10000);
+    await radioBtn.click();
+    await browser.sleep(2000);
+    await minimizeButton.click();
 
     //wait to manually click maximise icon
     // Move mouse over the button
@@ -181,9 +188,10 @@ export class schemePage {
 
 
   async lookForElement(elem1: ElementFinder, string1, string2) {
-    await browser.wait(ExpectedConditions.visibilityOf(elem1), 30000);
+    await browser.sleep(2000);
     await elem1.isPresent().then(function (isPresent) {
       if (isPresent) {
+         browser.wait(ExpectedConditions.visibilityOf(elem1), 20000);
         elem1.getText().then(function (text) {
           console.log(string1 + text);
         })
@@ -195,8 +203,11 @@ export class schemePage {
   }
 
 
+
   async tableData(elem1: ElementArrayFinder, elem2: ElementArrayFinder) {
+    console.log("Table data: ");
     await elem1.isPresent().then(function (isVisible) {
+      console.log("is visible: "+isVisible);
       if (isVisible) {
         elem1.getText().then(function (text) {
           console.log(text);
@@ -204,6 +215,23 @@ export class schemePage {
             console.log(text);
           })
         })
+      }
+    })
+  }
+  async tableDataRet(elem1: ElementArrayFinder, elem2: ElementArrayFinder) {
+    console.log("Table data: ");
+    await elem1.isPresent().then(function (isVisible) {
+      console.log("is visible: "+isVisible);
+      if (isVisible) {
+        elem1.getText().then(function (text) {
+          console.log(text);
+          elem2.getText().then(function (text) {
+            console.log(text);
+          })
+        })
+      }
+      else {
+        return;
       }
     })
   }

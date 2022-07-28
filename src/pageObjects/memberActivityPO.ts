@@ -31,6 +31,10 @@ export class memActivity {
   memberActivityAnalysis: ElementFinder;
   memberStartDate: ElementFinder;
   memberEndDate: ElementFinder;
+  memNetMovementAnalysisValue: ElementFinder;
+  memTodayAnalysisValue: ElementFinder;
+
+  memberActivityDetailReport:ElementFinder;
 
   constructor() {
 
@@ -54,6 +58,9 @@ export class memActivity {
     this.memberActivityAnalysis = element(by.xpath("//a[text() = 'Member Activity Analysis']"));
     this.memberStartDate =element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[14]/dashlet/div/report/kpi-report/div/div/div/span"));
     this.memberEndDate = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[15]/dashlet/div/report/kpi-report/div/div/div/span"));
+this.memNetMovementAnalysisValue = element(by.xpath("//h2[text()=' Member net movement ']/parent::div//span"));
+    this.memTodayAnalysisValue  = element(by.xpath("//h2[text()=' Members today ']/parent::div//span"));
 
+    this.memberActivityDetailReport = element(by.xpath("//a[text() = 'Member Activity Detail Report']"));
   }
 }

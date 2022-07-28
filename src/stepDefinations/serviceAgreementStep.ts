@@ -29,7 +29,7 @@ let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\serviceLevelAgreem
 
 When('user navigates to service level agreement overview', async () => {
   //browser.manage().window().setSize(900, 720);
-  await browser.sleep(2000);
+  await browser.sleep(1000);
   await sp.serviceAgreementLink.click();
 
   await browser.sleep(10000);
@@ -42,26 +42,41 @@ Then('user able to view the service level agreement fields in the page', async (
 
   await bf.basicFieldWithoutFonts(slp.username, slp.dataAsOf, slp.logo);
 
-})
+});
 
 Then('user able to view {string} service level agreement filter {string}', async (schemeId, options) => {
 
   //await sp.schemeFilter(slp.schemeCategory, slp.search, slp.radioBtn, slp.minMaxBtn, options);
-
+await browser.sleep(3000);
+  await browser.wait(ExpectedConditions.visibilityOf(slp.serviceScore),10000);
   await sp.lookForElement(slp.serviceScore, 'Service level agreement score is - ', 'Service level agreement score is missing');
-
+  await browser.sleep(1000);
+  await excel.excelWriteOperation2(path, 3, 3, slp.serviceScore, schemeId);
+  await browser.sleep(1000);
+  
   await sp.lookForElement(slp.noOfCalls, 'Total number of calls  - ', 'Total no of calls is missing');
-  await browser.sleep(2000);
-  await excel.excelWriteOperation(path, 3, 3, slp.noOfCalls, schemeId);
-  await browser.sleep(2000);
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 4, 3, slp.noOfCalls, schemeId);
+  await browser.sleep(1000);
   await sp.lookForElement(slp.callsPerMem, 'Calls per member - ', 'Call per member is missing');
-  await excel.excelWriteOperation(path, 4, 3, slp.callsPerMem, schemeId);
-  await browser.sleep(2000);
-  await sp.graph(slp.piegraph, 'Service level agreement pie chart is visible', 'Service level agreement pie chart is not visible');
+  await excel.excelWriteOperation(path, 5, 3, slp.callsPerMem, schemeId);
+  await browser.sleep(1000);
 
+
+  //await sp.graph(slp.piegraph, 'Service level agreement pie chart is visible', 'Service level agreement pie chart is not visible');
   await sp.graph(slp.callgraph, 'Calls received graph is visible', 'Calls received graph is not visible');
+  await excel.excelWriteOperationText(path, 8, 3, "Graph is displayed", schemeId);
+  await browser.sleep(1000);
 
-   
+  await sp.graph(slp.piegraph, 'SLA-Pie Chart is visible', 'SLA-Pie Chart is not visible');
+  await excel.excelWriteOperationText(path, 9, 3, "Chart is displayed", schemeId);
+  await browser.sleep(1000);
+
+  await browser.actions().mouseMove(slp.slaInnerCircle).perform();
+  await sp.lookForElement(slp.slaDesc, 'SLA Description is visible', 'SLA Description is not visible');
+  await excel.excelWriteOperationText(path, 10, 3, "SLA Description is displayed", schemeId);
+  await browser.sleep(1000);
+
   await browser.waitForAngularEnabled(false);
   let frame1: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[25]/dashlet/div/report/web-page-report/iframe")).getWebElement();
   await browser.switchTo().frame(frame1);
@@ -70,7 +85,7 @@ Then('user able to view {string} service level agreement filter {string}', async
 
   await slp.breakdownGraph.isPresent().then(function (isVisible) {//validating group name is displayed
     if (isVisible) {
-      console.log("Calls recieved breakdown is visible");
+      console.log("Calls received breakdown is visible");
       slp.table1Header.getText().then(function (text) {
         console.log(text);
         slp.row2.getText().then(function (text) {
@@ -82,20 +97,29 @@ Then('user able to view {string} service level agreement filter {string}', async
       })
       }
     else {
-      console.log("Calls recieved breakdown is not visible");
+      console.log("Calls received breakdown is not visible");
     }
   })
   //await excel.excelWriteOperation1(path, 10, 3, slp.table1Header, schemeId);
-  //await browser.sleep(2000);
-  await excel.excelWriteOperation1(path, 5, 3, slp.row2, schemeId);
-  await browser.sleep(2000);
-  await excel.excelWriteOperation1(path, 6, 3, slp.row4, schemeId);
-  await browser.sleep(2000);
+  //await browser.sleep(1000);
+
+
+  await excel.excelWriteOperation1(path, 7, 3, slp.row2, schemeId);
+  await browser.sleep(1000);
+  // await excel.excelWriteOperation1(path, 6, 3, slp.row4, schemeId);
+  // await browser.sleep(1000);
 
 await browser.actions().sendKeys(protractor.Key.END).perform();
 
-await sp.tableData(slp.tableHeader, slp.row1);
-})
+// await sp.tableData(slp.tableHeader, slp.row1);
+  await sp.lookForElement(slp.slaDateFilter, 'SLA Date Filter option is visible', 'SLA Date Filter option is missing');
+  await excel.excelWriteOperationText(path, 11, 3, "Filter is displayed", schemeId);
+  await browser.sleep(1000);
+
+  await sp.lookForElement(slp.schemeIDFilter, 'Scheme ID Filter option is visible', 'Scheme ID Filter option is missing');
+  await excel.excelWriteOperationText(path, 12, 3, "Filter is displayed", schemeId);
+  await browser.sleep(1000);
+});
 
 
   

@@ -18,10 +18,13 @@ import { excelReadAndWrite } from '../pageObjects/readWriteExcel';
 let excel = new excelReadAndWrite();
 let bf = new basicFields();
 let ga = new genderAge();
-let sp = new schemePage();
 let mep = new memberEngagementPage();
-let dp = new landingPage();
-let space = new chooseSpaces();
+import { memInfo } from '../pageObjects/memInfoPO';
+import { memActivity } from '../pageObjects/memberActivityPO';
+
+let ma = new memActivity();
+let mi = new memInfo();
+let sp = new schemePage();
 let expect = chai.expect;
 let should = chai.should;
 //let alert = new Alert();
@@ -55,21 +58,45 @@ Then('user able to view {string} Member Online Engagements filter {string}, {str
   //await ga.memStatus(mep.memStatus,mep.search3,mep.radioBtn3,mep.minMaxBtn3,status);
 
   await browser.sleep(10000);
+  await sp.lookForElement(mep.memberWithEmail, 'Percentage of members with an email address are - ', 'Percentage of members with an email address are missing');
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 3, 3,mep.memberWithEmail, schemeId);
+  await browser.sleep(1000);
 
   await sp.lookForElement(mep.onlineReg, 'Online registrations are - ', 'Online registrations are missing');
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 6, 3, mep.onlineReg, schemeId);
+  await browser.sleep(1000);
+
+  await sp.lookForElement(mep.avgAge, 'Average age of registered members are - ', 'Average age of registered members are missing');
+  await browser.sleep(2000);
+  await excel.excelWriteOperation(path, 11,3, mep.avgAge, schemeId);
+  await browser.sleep(2000);
+
+  await sp.lookForElement(mep.female1, 'Average Female registered are - ', 'Average Female registered are  missing');
+  await browser.sleep(2000);
+  await excel.excelWriteOperation(path, 12, 3, mep.female1, schemeId);
+  await browser.sleep(2000);
+
+  await sp.lookForElement(mep.male1, 'Average male registered are - ', 'Average male registered are missing');
+  await browser.sleep(2000);
+  await excel.excelWriteOperation(path, 13, 3, mep.male1, schemeId);
+  await browser.sleep(2000);
 
   await sp.lookForElement(mep.memberLogLastMon, 'Member logged in (last month) are - ', 'Member logged in (last month) are missing');
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 4, 3, mep.memberLogLastMon, schemeId);
+  await browser.sleep(1000);
 
   await sp.lookForElement(mep.memberLogLast3Mon, 'Member logged in (last 3 month) are - ', 'Member logged in (last 3 month) are missing');
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 5, 3, mep.memberLogLast3Mon, schemeId);
+  await browser.sleep(1000);
 
-  await sp.lookForElement(mep.memberWithEmail, 'Percentage of members with an email address are - ', 'Percentage of members with an email address are missing');
-  await browser.sleep(2000);
-  await excel.excelWriteOperation(path, 3, 3, mep.memberWithEmail, schemeId);
-  await browser.sleep(2000);
 
 
   let frame: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[29]/dashlet/div/report/web-page-report/iframe")).getWebElement();
-  
+
   await browser.switchTo().frame(frame);
 
   await mep.breakdownBtn.click();
@@ -77,35 +104,33 @@ Then('user able to view {string} Member Online Engagements filter {string}, {str
   await browser.switchTo().defaultContent();
 
   await sp.lookForElement(mep.onlineRegEmail, 'Online registered with email is - ', 'Online registered with email is missing');
-  await browser.sleep(2000);
-  await excel.excelWriteOperation(path, 4, 3, mep.onlineRegEmail, schemeId);
-  await browser.sleep(2000);
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 7, 3, mep.onlineRegEmail, schemeId);
+  await browser.sleep(1000);
 
   await sp.lookForElement(mep.notRegEmail, 'Not registered yet with email is - ', 'Not registered yet with email is missing');
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 8, 3, mep.notRegEmail, schemeId);
+  await browser.sleep(1000);
 
   await sp.lookForElement(mep.regWithoutEmail, 'Registered without email is - ', 'Registered without email is missing');
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 9, 3, mep.regWithoutEmail, schemeId);
+  await browser.sleep(1000);
 
   await sp.lookForElement(mep.notRegWithoutEmail, 'Not registered yet without email is - ', 'Not registered yet without email is missing');
+  await browser.sleep(1000);
+  await excel.excelWriteOperation(path, 10, 3, mep.notRegWithoutEmail, schemeId);
+  await browser.sleep(1000);
 
-  await sp.lookForElement(mep.avgAge, 'Average age of registered members are - ', 'Average age of registered members are missing');
-  await browser.sleep(2000);
-  await excel.excelWriteOperation(path, 5, 3, mep.avgAge, schemeId);
-  await browser.sleep(2000);
-  
-  await sp.lookForElement(mep.female1, 'Average Female registered are - ', 'Average Female registered are  missing');
-  await browser.sleep(2000);
-  await excel.excelWriteOperation(path, 6, 3, mep.female1, schemeId);
-  await browser.sleep(2000);
-  
-  await sp.lookForElement(mep.male1, 'Average male registered are - ', 'Average male registered are missing');
-  await browser.sleep(2000);
-  await excel.excelWriteOperation(path, 7, 3, mep.male1, schemeId);
-  await browser.sleep(2000);
-  
   await sp.lookForElement(mep.memberByAgeGender, 'Member by Age and gender graph is visible', 'Member by Age and gender graph is visible are missing');
-  
+  await excel.excelWriteOperationText(path, 15,3,"Graph is displayed", schemeId);
+  await browser.sleep(1000);
+
   await sp.lookForElement(mep.map, 'Registrations by postcode map is visible', 'Registrations by postcode map is visible missing');
   await browser.executeScript("arguments[0].scrollIntoView();",mep.map);
+  await excel.excelWriteOperationText(path, 14, 3,"Map is displayed", schemeId);
+  await browser.sleep(1000);
   await mep.map.click();
 
   await browser.sleep(2000);
@@ -115,12 +140,24 @@ Then('user able to view {string} Member Online Engagements filter {string}, {str
   await browser.switchTo().frame(frame1);
 
   await sp.graphBreakdown(mep.graphBreakdownBtn, mep.tableHeader1, mep.row3, 'Opt out by age and gender graph is not visible');
+  // await excel.excelWriteOperation1(path, 16, 3, mep.tableHeader1, schemeId);
+  // await browser.sleep(1000);
+ await excel.excelWriteOperation1(path, 16, 3, mep.row3, schemeId);
+  await browser.sleep(1000);
 
   await browser.actions().sendKeys(protractor.Key.END).perform();
 
   await browser.sleep(2000);
 
   await sp.lookForElement(mep.barChart, 'Bar Chart-Registrations by Date is visible', 'Bar Chart-Registrations by Date is not visible');
+  await excel.excelWriteOperationText(path, 17, 3,"Graph is displayed", schemeId);
+  await browser.sleep(1000);
 
+  await mi.filterButton.click();
+  console.log("Clicked on Filter Button");
+  await browser.sleep(1000);
+  await sp.lookForElement(mi.schemeIDFilter, 'Scheme ID Filter option is visible', 'Scheme ID Filter option is missing');
+  await excel.excelWriteOperationText(path, 21, 3,"Filter is displayed", schemeId);
+  await browser.sleep(1000);
 })
 

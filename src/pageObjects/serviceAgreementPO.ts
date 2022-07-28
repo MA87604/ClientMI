@@ -26,6 +26,8 @@ export class serviceLevelAgreementPage {
   row1: ElementArrayFinder;
   row2: ElementArrayFinder;
   row4: ElementArrayFinder;
+  slaDesc: ElementFinder;
+  slaInnerCircle: ElementFinder;
   
   schemeCategory: ElementFinder;
   search: ElementFinder;
@@ -35,6 +37,8 @@ export class serviceLevelAgreementPage {
   username: ElementFinder;
   dataAsOf: ElementFinder;
   logo: ElementFinder;
+  schemeIDFilter: ElementFinder;
+  slaDateFilter: ElementFinder;
 
   constructor() {
 
@@ -52,7 +56,10 @@ export class serviceLevelAgreementPage {
     this.row1 = element(by.xpath("(//div[@class=\"table-view\"])[2]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
     this.row2 = element(by.xpath("(//div[@class=\"table-view\"])[1]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
     this.row4 = element(by.xpath("(//div[@class=\"table-view\"])[1]")).all(by.css("div.table-cell-outer-div.summaryText  > div > span"));
-    
+
+    this.schemeIDFilter= element(by.css("[aria-label='Open filter Scheme ID']"));
+    this.slaDateFilter=  element(by.css("[aria-label='Open filter SLA Date']"));
+
     this.schemeCategory = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[1]/dashlet/div/embedded-filter/mat-form-field/div/div[1]/div/mat-select"));
     this.search = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[1]/dashlet/div/embedded-filter/filter-selection/div[1]/search-panel/form/mat-form-field/div/div[1]/div[2]/input"));
     this.radioBtn = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[1]/dashlet/div/embedded-filter/filter-selection/div[2]/div/filter-option-list/mat-radio-group/mat-radio-button[1]/label/span[1]"));
@@ -62,7 +69,8 @@ export class serviceLevelAgreementPage {
     this.dataAsOf = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[2]/dashlet/div/report/text-report/div/div/p[3]/span/strong"));
     this.logo = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[5]/dashlet/div/report/image-report/img"));
     
-    
+    this.slaDesc = element(by.xpath("//p[contains(@class,'kpi-description')]"));
+    this.slaInnerCircle = element(by.css("[aria-label=\"A+\"]"));
   
   }
 }

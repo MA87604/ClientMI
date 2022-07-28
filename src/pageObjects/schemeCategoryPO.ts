@@ -26,7 +26,8 @@ export class schemeCategory {
   expandIcon: ElementFinder;
   categoryRet_Subheader: ElementFinder;
   dashletActionsIcon: ElementFinder;
-
+  minimizeButton: ElementFinder;
+  expandButton: ElementFinder;
 
   sodexomonthlyPaidCount: ElementFinder;
   sodexoAEWeeklyPaidCount: ElementFinder;
@@ -39,7 +40,9 @@ export class schemeCategory {
   sodexoTravelCount: ElementFinder;
   tvf4WeeklyTempCount: ElementFinder;
 
-
+  newMembersCount: ElementFinder;
+  exStakeholdersAndSIPPMembers: ElementFinder;
+  drawdownCategory: ElementFinder;
 
 
 
@@ -47,12 +50,12 @@ export class schemeCategory {
 
   constructor() {
 
-    this.table1Header = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
-    this.table2Header = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
-    this.table3Header = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
-    this.row1 = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.row2 = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
-    this.row3 = element(by.xpath("//div[@class='table-view']")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.table1Header = element(by.xpath("(//div[@class='table-view'])[1]")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
+    this.table2Header = element(by.xpath("(//div[@class='table-view'])[2]")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
+    this.table3Header = element(by.xpath("(//div[@class='table-view'])[3]")).all(by.css("div.table-cell-outer-div.headerText > div > span"));
+    this.row1 = element(by.xpath("(//div[@class='table-view'])[1]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.row2 = element(by.xpath("(//div[@class='table-view'])[2]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
+    this.row3 = element(by.xpath("(//div[@class='table-view'])[3]")).all(by.css("div.table-cell-outer-div.bodyText > div > span"));
     this.radioBtn = element(by.css("label.mat-radio-label"));
     
     this.schemeCategory = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[4]/dashlet/div/embedded-filter/mat-form-field/div/div[1]/div/mat-select"));
@@ -78,8 +81,17 @@ export class schemeCategory {
     this.sodexoTravelCount = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]/div/div/div[2]/div[27]/div/div/span"));
     this.tvf4WeeklyTempCount = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]/div/div/div[2]/div[30]/div/div/span"));
 
+    this.newMembersCount = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]/div/div/div[2]/div[3]/div/div/span"));
+    this.exStakeholdersAndSIPPMembers = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]/div/div/div[2]/div[6]/div/div/span"));
+    this.drawdownCategory = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/report/visualizer-report/div/table-container/table-visualization/div[1]/div/div/div[2]/div[9]/div/div/span"));
+
+
     this.expandIcon = element(by.xpath("//span[text()=' Category selected retirement age ']/ancestor::div[@class='dashlet-header']//mat-icon[@data-mat-icon-namespace=\"icon-expand\"]"));
     this.dashletActionsIcon = element(by.xpath("//span[text()=' Category selected retirement age ']/ancestor::div[@class='dashlet-header']//mat-icon[@data-mat-icon-namespace=\"icon-arrow-down-tail\"]"));
     this.categoryRet_Subheader = element(by.xpath("//span[text()=' Category selected retirement age ']"));
+
+
+    this.minimizeButton = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[10]/dashlet/div/div[1]/div[2]/div/dashlet-maximize/button"));
+    this.expandButton = element(by.css("[data-mat-icon-name=\"expand\"]"));
   }
 }

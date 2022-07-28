@@ -59,16 +59,14 @@ export let config: Config = {
             // "@landing",// NA
             // "@scheme", // NA
             // "@serviceLevelAgreement", // NA
-            // "@optOut", // NA
-            // "@contribution",  //NA
-
+            // "@optOut",
             // "@memberOnlineEngagement",
             // "@memberInfo", //sainsbury data not available
             // "@memberActivity",
-            //"@contribution",
-            "@assetUnderMgmt",
+            // "@contribution",
+            // "@assetUnderMgmt",
             // "@retirement",//sainsbury tolernce level FAIL
-           // "@schemeCategory", //Result column FAIL
+           "@schemeCategory", //Result column FAIL
            //  "@Regression"
         ],
         format: 'json:./cucumber_report.json',
@@ -95,10 +93,10 @@ export let config: Config = {
         reporter.generate(options);
     },
     onPrepare: async () => {
-        let username = 'monika.ahlawat@landg.com';
-        let password = 'B1rstM!2@21';
-        // let username = 'namitha.n@landg.com';
-        // let password = 'B1rst!2022';
+        // let username = 'monika.ahlawat@landg.com';
+        // let password = 'B1rstM!2@21';
+        let username = 'namitha.n@landg.com';
+        let password = 'B1rst!2022';
         //let username = 'neil.ramsay@landg.com';
         //let password = 'Ftins67@Yn';
 
@@ -110,8 +108,9 @@ export let config: Config = {
         await element(by.id("username")).sendKeys(username);
         await element(by.id("password")).sendKeys(password);
         await element(by.css("button.btn.submit")).click();
+        console.log("Logged in successfully");
         await browser.manage().timeouts().implicitlyWait(30000);
-        await browser.wait(ExpectedConditions.titleIs('Modeler'), 120000).then(function (text) {
+        await browser.wait(ExpectedConditions.titleIs('Modeler'), 30000).then(function (text) {
             console.log("Welcome to client MI")
         }
         )

@@ -1,3 +1,5 @@
+import {schemeCategory} from "./schemeCategoryPO";
+
 const {Status} = require('@cucumber/cucumber');
 import { by, element, ElementFinder, ElementArrayFinder, browser,ExpectedConditions,protractor} from "protractor";
 import chai from "chai";
@@ -8,6 +10,11 @@ import { landingPage } from "./landingPO";
 chai.use(chaiAsPromised);
 let expect = chai.expect;
 let dp = new landingPage();
+
+let sc = new schemeCategory();
+import { excelReadAndWrite } from './readWriteExcel';
+let excel = new excelReadAndWrite();
+let path = "C:\\Dev\\ClientMI_WorkSpace\\ClientMI-main\\data\\schemeCategory.xlsx";
 
 export class basicFields {
 
@@ -166,11 +173,29 @@ export class basicFields {
   async tableData(elem1:ElementArrayFinder) {
     await elem1.getText().then(function (text) {
       console.log(text);
+
     })
 
 
   }
 
+  async tableDataSC(elem1:ElementArrayFinder,schemeId) {
+    await elem1.getText().then(async function (text) {
+      console.log(text);
+      await elem1.count().then(async function (rowsCount) {
+        console.log("Rows Count: "+rowsCount);
+        for(let i=0;i<rowsCount;i++){
+          await excel.excelWriteOperationText(path, i, 3, text, schemeId);
+          await browser.sleep(2000);
+        }
+      })
+
+    });
+if(!(elem1.isPresent())){
+  return;
+}
+
+  }
 
  
 

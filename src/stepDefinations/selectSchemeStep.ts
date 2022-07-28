@@ -32,8 +32,8 @@ Given('user select the scheme {string}', async (schemeId) => {
 
   await bf.basicFieldWithoutFonts(lp.username, lp.date, lp.logo);
 
-  await sp.selectScheme(lp.schemeCombobox, lp.searchbutton, lp.radioBtn, lp.minimizeButton,lp.expandButton, schemeId);
-  
+  // await sp.selectScheme(lp.schemeCombobox, lp.searchbutton, lp.radioBtn, lp.minimizeButton,lp.expandButton, schemeId,lp.hiddenSearchButton);
+  await browser.sleep(5000);
   await sp.lookForElement(sp.groupName, 'Group name is - ', 'Group name is not present');
   await browser.sleep(2000);
   await excel.excelWriteOperationString(path, 3, 3, sp.groupName, schemeId);
@@ -65,7 +65,7 @@ Given('user select the scheme {string}', async (schemeId) => {
   await browser.sleep(2000);
 
 
-  let frame1: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[24]/dashlet/div/report/web-page-report/iframe")).getWebElement();
+  let frame1: WebElementPromise = element(by.xpath("/html/body/ui-view/main/ui-view[2]/ui-view/ui-view/div/dashboard-canvas/div/div/div[25]/dashlet/div/report/web-page-report/iframe")).getWebElement();
   
   await browser.switchTo().frame(frame1);
 
@@ -86,7 +86,7 @@ When('user navigates to Workplace dashboard', async () => {
   await sp.lookForElement(lp.groupName, 'Group name is - ', 'Group name is not present');
   
 })
-/*
+
 Then('user able to view tiles in the dashboard', async () => {
 
   await bf.basicField(sp.username, sp.date, sp.logo);
@@ -136,7 +136,7 @@ Then('user able to browse collection & dasboards', async () => {
   await bf.exportButton();
 
 
-});*/
-  
+});
+
 
 
